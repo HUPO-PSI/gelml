@@ -1240,7 +1240,7 @@ is_a: sep:00076 ! substance
 
 [Term]
 id: sep:00193
-name: digital entitiy role
+name: digital entity role
 def: "def" [def:add]
 is_a: sep:00010 ! role
 
@@ -1248,5 +1248,8 @@ is_a: sep:00010 ! role
 id: sep:00194
 name: picking gel feature location set
 def: "def" [def:add]
-is_a: sep:00193 ! digital entitiy role
+is_a: sep:00193 ! digital entity role
 
+[Typedef]
+id: has_units
+name: has_units
