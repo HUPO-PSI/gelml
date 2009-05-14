@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="https://psidev.svn.sourceforge.net/svnroot/psidev/psi/tools/current/xsl/cv-mapping/CvMappingRules.xsl" type="text/xsl"?>
+<!-- test mapping file created by ARJ based on mzIdentML mapping file -->
+<CvMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.psidev.info/files/validator/CvMapping.xsd"
+    modelName="GelML-v1.1 candidate"
+    modelURI="./GelML-v1_1candidate.xsd"
+    modelVersion="beta">
+
+    <CvReferenceList>
+        <CvReference cvName="MOD" cvIdentifier="MOD"/>
+        <CvReference cvName="Brenda" cvIdentifier="BTO"/>
+        <CvReference cvName="UNIMOD" cvIdentifier="UNIMOD"/>
+        <CvReference cvName="GO" cvIdentifier="GO"/>
+        <CvReference cvName="PATO" cvIdentifier="PATO"/>
+        <CvReference cvName="UO" cvIdentifier="UO"/>
+        <CvReference cvIdentifier="sepCV" cvName="sepCV"/>
+    </CvReferenceList>
+
+    <CvMappingRuleList>
+        
+        <CvMappingRule scopePath="" cvElementPath="" cvTermsCombinationLogic="" requirementLevel="" id="">
+            <CvTerm cvIdentifierRef="" termAccession="" termName="" useTerm="" allowChildren=""/>
+        </CvMappingRule>
+        
+        
+        <!-- 
+       
+        
+        <CvMappingRule id="R1"
+            cvElementPath="/mzIdentML/AnalysisSoftwareList/AnalysisSoftware/pf:ContactRole/pf:role/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001266" useTermName="false" useTerm="false"
+                termName="role type" isRepeatable="true" allowChildren="true" cvIdentifierRef="MS"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R2"
+            cvElementPath="/mzIdentML/pf:Provider/pf:ContactRole/pf:role/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001266" useTermName="false" useTerm="false"
+                termName="role type" isRepeatable="true" allowChildren="true" cvIdentifierRef="MS"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R3"
+            cvElementPath="/mzIdentML/pf:ReferenceableCollection/pf:Database/pf:ContactRole/pf:role/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001266" useTermName="false" useTerm="false"
+                termName="role type" isRepeatable="true" allowChildren="true" cvIdentifierRef="MS"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R4"
+            cvElementPath="/mzIdentML/AnalysisSampleCollection/pf:GenericMaterial/pf:ContactRole/pf:role/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001266" useTermName="false" useTerm="false"
+                termName="role type" isRepeatable="true" allowChildren="true" cvIdentifierRef="MS"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R5"
+            cvElementPath="/mzIdentML/AnalysisSampleCollection/pf:GenericMaterial/pf:cvParam/@accession"
+            requirementLevel="SHOULD" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="BTO:0000000" useTermName="false" useTerm="false"
+                termName="brenda source tissue ontology" isRepeatable="true" allowChildren="true"
+                cvIdentifierRef="BTO"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R6"
+            cvElementPath="/mzIdentML/SequenceCollection/DBSequence/pf:cvParam/@accession"
+            requirementLevel="MAY" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001342" useTermName="false" useTerm="false"
+                termName="database sequence details" isRepeatable="false" allowChildren="true"
+                cvIdentifierRef="MS"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R7"
+            cvElementPath="/mzIdentML/SequenceCollection/Peptide/pf:cvParam/@accession"
+            requirementLevel="MAY" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001355" useTermName="false" useTerm="false"
+                termName="peptide descriptions" isRepeatable="true" allowChildren="true"
+                cvIdentifierRef="MS"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R8"
+            cvElementPath="/mzIdentML/SequenceCollection/Peptide/Modification/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="UNIMOD:0" useTermName="false" useTerm="false"
+                termName="UNIMOD root" isRepeatable="true" allowChildren="true"
+                cvIdentifierRef="UNIMOD"/>
+            <CvTerm termAccession="MOD:00000" useTermName="false" useTerm="false"
+                termName="protein modification" isRepeatable="true" allowChildren="true"
+                cvIdentifierRef="MOD"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R9"
+            cvElementPath="/mzIdentML/SequenceCollection/Peptide/SubstitutionModification/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="UNIMOD:0" useTermName="false" useTerm="false"
+                termName="UNIMOD root" isRepeatable="true" allowChildren="true"
+                cvIdentifierRef="UNIMOD"/>
+            <CvTerm termAccession="MOD:00000" useTermName="false" useTerm="false"
+                termName="protein modification" isRepeatable="true" allowChildren="true"
+                cvIdentifierRef="MOD"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R10"
+            cvElementPath="/mzIdentML/AnalysisCollection/SpectrumIdentification/pf:ContactRole/pf:role/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="" cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001266" useTermName="false" useTerm="false"
+                termName="role type" isRepeatable="true" allowChildren="true" cvIdentifierRef="MS"/>
+        </CvMappingRule>
+
+        <CvMappingRule id="R13"
+            cvElementPath="/mzIdentML/AnalysisProtocolCollection/SpectrumIdentificationProtocol/SearchType/pf:cvParam/@accession"
+            requirementLevel="MUST" scopePath="/mzIdentML/AnalysisProtocolCollection/"
+            cvTermsCombinationLogic="OR">
+            <CvTerm termAccession="MS:1001080" useTermName="false" useTerm="false"
+                termName="search type" isRepeatable="true" allowChildren="true" cvIdentifierRef="MS"
+            />
+        </CvMappingRule>
+        
+        -->
+
+       
+
+    </CvMappingRuleList>
+</CvMapping>
