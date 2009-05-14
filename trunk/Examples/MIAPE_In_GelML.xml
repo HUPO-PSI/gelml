@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GelML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate GelML-v1_1candidate.xsd"
+    xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../schema/GelML-v1_1candidate.xsd"
     xmlns="http://www.psidev.info/gelml/1_1candidate"
     xmlns:pf="http://psidev.info/fuge-light/1.0"
     id="ex006:GelML:001">

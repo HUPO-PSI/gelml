@@ -1,6 +1,6 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <GelML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate GelML-v1_1candidate.xsd"
+	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../schema/GelML-v1_1candidate.xsd"
 	xmlns="http://www.psidev.info/gelml/1_1candidate"
 	xmlns:pf="http://psidev.info/fuge-light/1.0"
 	id="ex001:GelML:001">
@@ -191,7 +191,19 @@
 				</Gel>				
 			</inputGel>
 			<output>
-				<Gel1D id="ex001:Gel1D0"/>				
+				<Gel1D id="ex001:Gel1D0">
+					<MolWeightRange dimension="1">
+						<pf:lowerLimit>
+							<pf:PropertyValue value="12" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
+						</pf:lowerLimit>
+						<pf:upperLimit>
+							<pf:PropertyValue value="120" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
+						</pf:upperLimit>
+						<rangeType>
+							<pf:cvParam cvRef="sepCV" accession="sep:00018" name="linear distribution"/>
+						</rangeType>						
+					</MolWeightRange>
+				</Gel1D>				
 			</output>			
 			<ChildProtocolApplications>
 				<SampleLoadingApplication id="SLA1"	SampleLoadingProtocol_ref="ex001:SampleLoadingProtocol0" Gel_ref="ex001:Gel0" GelLane_ref="GelLane1">

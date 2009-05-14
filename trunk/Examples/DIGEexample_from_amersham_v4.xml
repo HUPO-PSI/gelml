@@ -1,487 +1,308 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <GelML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.psidev.info/gelml/1.0 GelML-v1.xsd"
- xmlns:fuge="http://fuge.sourceforge.net/fuge/1.0"
- xmlns="http://www.psidev.info/gelml/1.0"
- identifier="ex003:GelML:003"
- name="DIGE example from http://www5.amershambiosciences.com/"> 
+	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../schema/GelML-v1_1candidate.xsd"
+	xmlns="http://www.psidev.info/gelml/1_1candidate"
+	xmlns:pf="http://psidev.info/fuge-light/1.0"
+	id="ex006:GelML:001" name="DIGE example from http://www5.amershambiosciences.com/">
 
-	<fuge:_bibliographicReferences BibliographicReference_ref="ex003:BibliographicReference0"/>
-
+	<cvList>
+		<pf:cv fullName="sepCV" URI="https://psidev.svn.sourceforge.net/svnroot/psidev/psi/sepcv/trunk/sep.obo" id="sepCV" version="TO DO" />
+		<pf:cv id="UO" fullName="Unit Ontology" URI="http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/unit.obo"/>
+	</cvList>
+	
 	<GelMLMaterialCollection>
-		<fuge:GenericMaterial name="Brain tissue from rats injected with kainic acid"
-			identifier="ex003:GenericMaterial0">
-			<fuge:_characteristics OntologyTerm_ref="ex003:OntologyIndividual9"/>
+		<pf:GenericMaterial name="Brain tissue from rats injected with kainic acid"	id="ex003:GenericMaterial0">
+			<pf:cvParam cvRef="sepCV" accession="sep:00184" name="Cy3"/>
+		</pf:GenericMaterial>
 
-		</fuge:GenericMaterial>
+		<pf:GenericMaterial name="Brain tissue from rats - control" id="ex003:GenericMaterial1">
+			<pf:cvParam cvRef="sepCV" accession="sep:00185" name="Cy5"/>
+		</pf:GenericMaterial>
 
-		<fuge:GenericMaterial name="Brain tissue from rats - control" identifier="ex003:GenericMaterial1">
-			<fuge:_characteristics OntologyTerm_ref="ex003:OntologyIndividual10"/>
-
-		</fuge:GenericMaterial>
-
-		<fuge:GenericMaterial name="Pooled Sample" identifier="ex003:GenericMaterial2">
-			<fuge:_characteristics OntologyTerm_ref="ex003:OntologyIndividual11"/>
-		</fuge:GenericMaterial>
+		<pf:GenericMaterial name="Pooled Sample" id="ex003:GenericMaterial2">
+			<pf:cvParam cvRef="sepCV" accession="sep:00183" name="Cy5"/>
+		</pf:GenericMaterial>
+		
+		<pf:GenericMaterial name="Sample for prep gel" id="ex003:GenericMaterial3"/>
+		
 
 	</GelMLMaterialCollection>
 
 	<GelMLDataCollection>
-		<Image name="Image for channel Cy2" identifier="ex003:Image0"
+		<Image name="Image for channel Cy2" id="ex003:Image0"
 			location="http://temp.uri.tocome">
-			<!-- Not sure if these are correct for channel, probably should get the actual measurements of wavelengths!! -->
-			<_channel>
-				<fuge:ComplexValue> 
-					<fuge:_value OntologyTerm_ref="ex003:OntologyIndividual12"/>
-				</fuge:ComplexValue>
-				
-			</_channel>
-
+			<!-- Not sure of correct wavelength values for channels!! -->
+			<channel>
+				<pf:AtomicValue>
+					<pf:PropertyValue value="9999" unitAccession="TO DO" unitCvRef="UO" unitName=""/>
+				</pf:AtomicValue>				
+			</channel>
 		</Image>
 
-		<Image name="Image for Cy3 channel" identifier="ex003:Image1"
+		<Image name="Image for Cy3 channel" id="ex003:Image1"
 			location="http://temp.uri.tocome">
-			<_channel>
-				<fuge:ComplexValue>
-					<fuge:_value OntologyTerm_ref="ex003:OntologyIndividual13"/>
-				</fuge:ComplexValue>
-				
-			</_channel>
-
-
+			<channel>
+				<pf:AtomicValue>
+					<pf:PropertyValue value="9999" unitAccession="TO DO" unitCvRef="UO" unitName=""/>
+				</pf:AtomicValue>				
+			</channel>
 		</Image>
 
-		<Image name="Image for Cy5 channel" identifier="ex003:Image2"
+		<Image name="Image for Cy5 channel" id="ex003:Image2"
 			location="http://temp.uri.tocome">
-			<_channel>
-				<fuge:ComplexValue>
-					<fuge:_value OntologyTerm_ref="ex003:OntologyIndividual14"/>
-				</fuge:ComplexValue>
-				
-			</_channel>
-		
+			<channel>
+				<pf:AtomicValue>
+					<pf:PropertyValue value="9999" unitAccession="TO DO" unitCvRef="UO" unitName=""/>
+				</pf:AtomicValue>					
+			</channel>		
 		</Image>
 
-		<Image name="Image of prep gel" identifier="ex003:Image3" location="http://temp.uri.to.come"/>
+		<Image name="Image of prep gel" id="ex003:Image3" location="http://temp.uri.to.come"/>
 
 	</GelMLDataCollection>
 
 	<GelMLProtocolCollection>
-		<fuge:GenericEquipment name="Ettan DALTtwelve Large Vertical System"
-			identifier="ex003:GenericEquipment0"/>
+		<pf:GenericEquipment name="Ettan DALTtwelve Large Vertical System"
+			id="ex003:GenericEquipment0"/>
 
-		<fuge:GenericEquipment name="Typhoon 9400 Variable Imager" identifier="ex003:GenericEquipment1"/>
+		<pf:GenericEquipment name="Typhoon 9400 Variable Imager" id="ex003:GenericEquipment1"/>
 
 		<ElectrophoresisProtocol
 			name="1st dimension electrophoresis protocol (enter optional other name here)"
-			identifier="ex003:ElectrophoresisProtocol0">
-			<ElectrophoresisStep identifier="ex003:ElectrophoresisStep0" actionOrdinal="1">
-				<ElectricalParameter identifier="ex003:ElectricalParameter0">
-					<fuge:AtomicValue value="500">
-						<fuge:_unit OntologyTerm_ref="ex003:OntologyIndividual1"/>
-					</fuge:AtomicValue>
-					<_electricalSetting OntologyTerm_ref="ex003:OntologyIndividual18"/>			
-
-				</ElectricalParameter>
-
-				<Duration identifier="ex003:Duration0">
-					<fuge:AtomicValue value="1">
-						<fuge:_unit OntologyTerm_ref="ex003:OntologyIndividual0"/>
-					</fuge:AtomicValue>
-				</Duration>
-
-			</ElectrophoresisStep>
-
-			<ElectrophoresisStep identifier="ex003:ElectrophoresisStep4">
-				<ElectricalParameter identifier="ex003:ElectricalParameter2">
-					<fuge:AtomicValue value="1000">
-						<fuge:_unit OntologyTerm_ref="ex003:OntologyIndividual1"/>
-					</fuge:AtomicValue>
-					<_electricalSetting OntologyTerm_ref="ex003:OntologyIndividual19"/>
-
-				</ElectricalParameter>
-
-				<Duration identifier="ex003:Duration2">
-					<fuge:AtomicValue value="1">
-						<fuge:_unit OntologyTerm_ref="ex003:OntologyIndividual0"/>
-					</fuge:AtomicValue>
-
-				</Duration>
-
-			</ElectrophoresisStep>
-
-			<ElectrophoresisStep identifier="ex003:ElectrophoresisStep5" actionOrdinal="3">
-				<ElectricalParameter identifier="ex003:ElectricalParameter3">
-					<fuge:AtomicValue value="8000">
-						<fuge:_unit OntologyTerm_ref="ex003:OntologyIndividual1"/>
-					</fuge:AtomicValue>
-
-					<_electricalSetting OntologyTerm_ref="ex003:OntologyIndividual18"/>
-
-				</ElectricalParameter>
-
-				<Duration identifier="ex003:Duration3">
-					<fuge:AtomicValue value="0.034">
-						<fuge:_unit OntologyTerm_ref="ex003:OntologyIndividual5"/>
-					</fuge:AtomicValue>
-				</Duration>
-
-			</ElectrophoresisStep>
-
+			id="ex003:ElectrophoresisProtocol0">
+			<protocolText>[Protocol text in here]</protocolText>
 		</ElectrophoresisProtocol>
 
 		<ElectrophoresisProtocol
 			name="2nd dimension electrophoresis protocol (enter optional other name here)"
-			identifier="ex003:ElectrophoresisProtocol1">
-			<_electrophoresisEquipment GenericEquipment_ref="ex003:GenericEquipment0"/>
-
-			<ElectrophoresisStep identifier="ex003:ElectrophoresisStep1" actionOrdinal="1">
-				<ElectricalParameter identifier="ex003:ElectricalParameter4">
-					<fuge:AtomicValue value="1.5">
-						<fuge:_unit OntologyTerm_ref="ex003:OntologyIndividual23"/>
-					</fuge:AtomicValue>
-
-				</ElectricalParameter>
-
-				<Duration identifier="ex003:Duration1">
-					<fuge:AtomicValue value="Overnight"/>
-				</Duration>
-
-			</ElectrophoresisStep>
-
+			id="ex003:ElectrophoresisProtocol1">
+			<protocolText>[Protocol text in here]</protocolText>
+			<electrophoresisEquipment GenericEquipment_ref="ex003:GenericEquipment0"/>
 		</ElectrophoresisProtocol>
 
 		<DetectionProtocol name="Sypro ruby staining for prep gels"
-			identifier="ex003:DetectionProtocol0">
-			<SubstanceAction identifier="ex003:SubstanceAction0" actionOrdinal="1"
-				actionText="(Describe how stain or label was entered here and use Mass, concentration and or volume for the quantity below)">
-				<_substanceType OntologyTerm_ref="ex003:OntologyIndividual2"/>
-			</SubstanceAction>
-
+			id="ex003:DetectionProtocol0">
+			<protocolText>[Protocol text in here]</protocolText>
+			<DetectionAgent>
+				<pf:cvParam cvRef="sepCV" accession="sep:00188" name="SYPRO Ruby"/>
+			</DetectionAgent>
 		</DetectionProtocol>
 
-		<Gel2DProtocol identifier="ex003:Gel2DProtocol0">
-			<SampleLoadingAction identifier="ex003:SampleLoadingAction0" actionOrdinal="1"
-				SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol0"></SampleLoadingAction>
-
-			<FirstDimensionAction identifier="ex003:FirstDimensionAction0" actionOrdinal="2"
-				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1"></FirstDimensionAction>
-
-			<SecondDimensionAction identifier="ex003:SecondDimensionAction0" actionOrdinal="4"
-				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1"></SecondDimensionAction>
-
-			<InterDimensionAction identifier="ex003:InterDimensionAction0" actionOrdinal="3"
+		<Gel2DProtocol id="ex003:Gel2DProtocol0">
+			<SampleLoadingAction id="ex003:SampleLoadingAction0" actionOrdinal="1"
+				SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol0"/>
+			<FirstDimensionAction id="ex003:FirstDimensionAction0" actionOrdinal="2"
+				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1"/>
+			<SecondDimensionAction id="ex003:SecondDimensionAction0" actionOrdinal="4"
+				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1"/>
+			<InterDimensionAction id="ex003:InterDimensionAction0" actionOrdinal="3"
 				preDimension="2" Protocol_ref="ex003:GenericProtocol1"/>
-
 		</Gel2DProtocol>
 
 		<SampleLoadingProtocol name="Sample loading protocol"
-			identifier="ex003:SampleLoadingProtocol0"/>
+			id="ex003:SampleLoadingProtocol0">
+			<protocolText>[Protocol text in here]</protocolText>
+		</SampleLoadingProtocol>
 
-		<fuge:GenericProtocol name="DIGE Image acquisition protocol" identifier="ex003:GenericProtocol0"
-			protocolText="(describe image acquistion in here, optionally enter details of equipment, parameters, etc below)"/>
+		<pf:GenericProtocol name="DIGE Image acquisition protocol" id="ex003:GenericProtocol0">
+			<pf:protocolText>[describe image acquistion in here, optionally enter details of equipment, parameters, etc below]</pf:protocolText>
+		</pf:GenericProtocol>
 
-		<fuge:GenericProtocol name="Rehydration" identifier="ex003:GenericProtocol1"
-			protocolText="rehydration for 10 h"/>
+		<pf:GenericProtocol name="Rehydration" id="ex003:GenericProtocol1">
+			<pf:protocolText>rehydration for 10 h</pf:protocolText>
+		</pf:GenericProtocol>
 
 		<SampleLoadingProtocol name="Sample loading for prep gel"
-			identifier="ex003:SampleLoadingProtocol1"/>
+			id="ex003:SampleLoadingProtocol1">
+			<protocolText>[Sample loading for prep gel]</protocolText>
+		</SampleLoadingProtocol>
 
-		<fuge:GenericProtocol name="Spot excision" identifier="ex003:GenericProtocol2"
-			protocolText="One of the glass plates was treated with PlusOne™ Bind-Silane and spot location reference markers were attached to the right and left-hand sides of the glass plate. The gels were used for spot picking and subsequent mass spectrometry (MS) identification."/>
+		<pf:GenericProtocol name="Spot excision" id="ex003:GenericProtocol2">
+			<pf:protocolText>One of the glass plates was treated with PlusOne™ Bind-Silane and spot location reference markers were attached to the right and left-hand sides of the glass plate. The gels were used for spot picking and subsequent mass spectrometry (MS) identification.</pf:protocolText>
+		</pf:GenericProtocol>
 
-		<Gel2DProtocol name="Protocol for 2D prep gel" identifier="ex003:Gel2DProtocol1">
-			<SampleLoadingAction identifier="ex003:SampleLoadingAction1" actionOrdinal="1"
-				dimension="1" SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol1"></SampleLoadingAction>
-
-			<FirstDimensionAction identifier="ex003:FirstDimensionAction1" actionOrdinal="2"
-				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol0"></FirstDimensionAction>
-
-			<SecondDimensionAction identifier="ex003:SecondDimensionAction1" actionOrdinal="2"
-				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1"></SecondDimensionAction>
-
+		<Gel2DProtocol name="Protocol for 2D prep gel" id="ex003:Gel2DProtocol1">
+			<SampleLoadingAction id="ex003:SampleLoadingAction1" actionOrdinal="1"
+				dimension="1" SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol1"/>
+			<FirstDimensionAction id="ex003:FirstDimensionAction1" actionOrdinal="2"
+				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol0"/>
+			<SecondDimensionAction id="ex003:SecondDimensionAction1" actionOrdinal="2"
+				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1"/>
 		</Gel2DProtocol>
-
 	</GelMLProtocolCollection>
 
-	<Gel2DExperiment name="Description of DIGE gels" identifier="ex003:Gel2DExperiment0">
-		<!-- Need to put in the 3 ref'd ImageAcquisition protocols -->
-		<ImageAcquisitionApplication identifier="ex003:ImageAcquisitionApplication0"
-			Image_ref="ex003:Image0" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
-			Material_ref="ex003:Gel2D0"/>
+	<Gel2DExperiment name="Description of DIGE gels" id="ex003:Gel2DExperiment0">	
 
-		<ImageAcquisitionApplication identifier="ex003:ImageAcquisitionApplication1"
-			Image_ref="ex003:Image1" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
-			Material_ref="ex003:Gel2D0"/>
-
-		<ImageAcquisitionApplication identifier="ex003:ImageAcquisitionApplication2"
-			Image_ref="ex003:Image2" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
-			Material_ref="ex003:Gel2D0"></ImageAcquisitionApplication>
-
-		<SampleLoadingApplication identifier="ex003:SampleLoadingApplication0"
-			SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol0" Gel_ref="ex003:Gel0">
-			<fuge:GenericMaterialMeasurement Material_ref="ex003:GenericMaterial0">
-				<fuge:AtomicValue value="30">
-					<fuge:_unit OntologyTerm_ref=""/><!-- Mililitres? !!-->
-				</fuge:AtomicValue>
-			</fuge:GenericMaterialMeasurement>
-			<fuge:GenericMaterialMeasurement Material_ref="ex003:GenericMaterial1">
-				<fuge:AtomicValue value="30">
-					<fuge:_unit OntologyTerm_ref=""/><!-- Mililitres? !!-->
-				</fuge:AtomicValue>
-			</fuge:GenericMaterialMeasurement>
-			<fuge:GenericMaterialMeasurement Material_ref="ex003:GenericMaterial2">
-				<fuge:AtomicValue value="30">
-					<fuge:_unit OntologyTerm_ref=""/><!-- Mililitres? !!-->
-				</fuge:AtomicValue>
-			</fuge:GenericMaterialMeasurement>
-
-		</SampleLoadingApplication>
-
-		<_electrophoresisType OntologyTerm_ref="ex003:OntologyIndividual25"/>
+		<electrophoresisType>
+			<pf:cvParam cvRef="sepCV" accession="sep:00180" name="difference gel electrophoresis"/>
+		</electrophoresisType>
 
 		<Gel2DApplication
 			name="(Enter optionally the activity date, operator using ContactRole, and details of gels used in first and second dimension)"
-			identifier="ex003:Gel2DApplication0" Gel2DProtocol_ref="ex003:Gel2DProtocol0">
-			<fuge:ActionApplication identifier="ex003:ActionApp4" ProtocolApplication_ref="ex003:SampleLoadingApplication0"
-				Action_ref="ex003:SampleLoadingAction0"/>
+			id="ex003:Gel2DApplication0" Gel2DProtocol_ref="ex003:Gel2DProtocol0">
 
-			<fuge:ActionApplication identifier="ex003:ActionApp5" ProtocolApplication_ref="ex003:ElectrophoresisApplication0"
-				Action_ref="ex003:FirstDimensionAction0"/>
-
-			<fuge:ActionApplication identifier="ex003:ActionApp6" ProtocolApplication_ref="ex003:ElectrophoresisApplication1"
-				Action_ref="ex003:SecondDimensionAction0"/>
-
-			<Gel2D name="Main DIGE gel" identifier="ex003:Gel2D0">				
-				<PHRange dimension="1">
-					<fuge:Range lowerLimit="3" upperLimit="10"/>			
+			<inputFirstDimension>
+				<Gel name="IPG strip" id="ex003:Gel0" separationDimension="1">
 					
-				</PHRange>
-			</Gel2D>
-
-			<_inputFirstDimension>
-				<Gel name="IPG strip" identifier="ex003:Gel0" separationDimension="1">
-					
-						<!-- Note percent acrylamide and Acrylamide:crosslinker are not specified -->	
-								
-					<_model OntologyTerm_ref="ex003:OntologyIndividual24"/>			
-					
-					
-					<Dimensions z="0" y="0" x="240">												
-						<_dimensionUnit OntologyTerm_ref="ex003:OntologyIndividual3"/>						
+					<!-- Note percent acrylamide and Acrylamide:crosslinker are not specified -->	
+					<gelType>
+						<pf:cvParam cvRef="sepCV" accession="sep:00131" name="immobiline dry strip"/>
+					</gelType>	
+					<Dimensions>
+						<x value="240" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
+						<y value="0" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
+						<z value="0" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
 					</Dimensions>
-
-					
-
 				</Gel>
 
-			</_inputFirstDimension>
+			</inputFirstDimension>
 
-			<_inputSecondDimension>
-				<Gel name="T SDS-PAGE" identifier="ex003:Gel1">
-					
-					<_percentAcrylamide>
-						<fuge:AtomicValue value="12.5"/>
-					</_percentAcrylamide>
-					
+			<inputSecondDimension>
+				<Gel name="T SDS-PAGE" id="ex003:Gel1">					
+					<percentAcrylamide>
+						<pf:AtomicValue>
+							<pf:PropertyValue value="12.5"/>
+						</pf:AtomicValue>
+					</percentAcrylamide>					
 					<!-- Other details not specified -->
-
-
 				</Gel>
 
-			</_inputSecondDimension>
-
+			</inputSecondDimension>
+			<output>
+				<Gel2D name="Main DIGE gel" id="ex003:Gel2D0">				
+					<PHRange dimension="1">
+						<pf:Range>
+							<pf:lowerLimit>
+								<pf:PropertyValue value="3"/>
+							</pf:lowerLimit>
+							<pf:upperLimit>
+								<pf:PropertyValue value="10"/>
+							</pf:upperLimit>
+						</pf:Range>						
+					</PHRange>
+				</Gel2D>
+			</output>
+			<ChildProtocolApplications>	
+				<SampleLoadingApplication id="ex003:SampleLoadingApplication0"
+					SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol0" Gel_ref="ex003:Gel0">
+					<InputSample>
+						<pf:GenericMaterialMeasurement Material_ref="ex003:GenericMaterial0">
+							<pf:AtomicValue>
+								<pf:PropertyValue value="30"  unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</pf:AtomicValue>
+						</pf:GenericMaterialMeasurement>
+						<pf:GenericMaterialMeasurement Material_ref="ex003:GenericMaterial1">
+							<pf:AtomicValue>
+								<pf:PropertyValue value="30"  unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</pf:AtomicValue>
+						</pf:GenericMaterialMeasurement>
+						<pf:GenericMaterialMeasurement Material_ref="ex003:GenericMaterial2">
+							<pf:AtomicValue>
+								<pf:PropertyValue value="30"  unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</pf:AtomicValue>
+						</pf:GenericMaterialMeasurement>
+					</InputSample>										
+				</SampleLoadingApplication>	
+				<ElectrophoresisApplication id="ex003:ElectrophoresisApplication0"
+					ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol0" Gel_ref="ex003:Gel0"/>
+				<ElectrophoresisApplication id="ex003:ElectrophoresisApplication1"
+				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1" Gel_ref="ex003:Gel1"/>
+			</ChildProtocolApplications>
 		</Gel2DApplication>
+		
+		<ImageAcquisitionApplication id="ex003:ImageAcquisitionApplication0"
+			Image_ref="ex003:Image0" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
+			Material_ref="ex003:Gel2D0"/>
+		<ImageAcquisitionApplication id="ex003:ImageAcquisitionApplication1"
+			Image_ref="ex003:Image1" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
+			Material_ref="ex003:Gel2D0"/>
+		<ImageAcquisitionApplication id="ex003:ImageAcquisitionApplication2"
+			Image_ref="ex003:Image2" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
+			Material_ref="ex003:Gel2D0"></ImageAcquisitionApplication>
 
-		<ElectrophoresisApplication identifier="ex003:ElectrophoresisApplication0"
-			ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol0" Gel_ref="ex003:Gel0"></ElectrophoresisApplication>
 
-		<ElectrophoresisApplication identifier="ex003:ElectrophoresisApplication1"
-			ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1" Gel_ref="ex003:Gel1"></ElectrophoresisApplication>
 
 	</Gel2DExperiment>
 
 	<Gel2DExperiment name="Description of preparative gels for MS"
-		identifier="ex003:Gel2DExperiment1">
-		<ExcisionApplication identifier="ex003:ExcisionApplication0"
+		id="ex003:Gel2DExperiment1">		
+		<electrophoresisType>
+			<pf:cvParam cvRef="sepCV" accession="sep:00155" name="two dimensional gel electrophoresis"/>
+		</electrophoresisType>
+
+		<Gel2DApplication id="ex003:Gel2DApplication1"
+			Gel2DProtocol_ref="ex003:Gel2DProtocol1">
+			<inputFirstDimension>
+				<Gel name="Immobiline DryStrip pH 3–10 NL" id="ex003:Gel2"
+					separationDimension="1">
+					<Dimensions>
+						<x value="240" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
+						<y value="0" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
+						<z value="0" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
+					</Dimensions>
+				</Gel>
+			</inputFirstDimension>
+			<inputSecondDimension>
+				<Gel name="Slab gel for preparing spots for MS" id="ex003:Gel4"
+					separationDimension="2"/>
+			</inputSecondDimension>
+			<output>
+				<Gel2D name="Main prep gel for MS" id="ex003:Gel2D1">
+					<PHRange dimension="1">
+						<pf:Range>
+							<pf:lowerLimit>
+								<pf:PropertyValue value="3"/>
+							</pf:lowerLimit>
+							<pf:upperLimit>
+								<pf:PropertyValue value="10"/>
+							</pf:upperLimit>
+						</pf:Range>
+					</PHRange>
+				</Gel2D>
+			</output>
+			<ChildProtocolApplications>
+				<SampleLoadingApplication id="ex003:SampleLoadingApplication1"
+					SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol1" Gel_ref="ex003:Gel2">
+					<InputSample>
+						<pf:GenericMaterialMeasurement Material_ref="ex003:GenericMaterial3"/>
+					</InputSample>						
+				</SampleLoadingApplication>
+				<ElectrophoresisApplication
+					name="Application of electrophoresis on prep gel in 1st dimension"
+					id="ex003:ElectrophoresisApplication2"
+					ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol0" Gel_ref="ex003:Gel2"/>				
+				<ElectrophoresisApplication
+					name="Application of electrophoresis protocol in 2nd dimension of prep gel"
+					id="ex003:ElectrophoresisApplication3"
+					ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1" Gel_ref="ex003:Gel4"/>
+			</ChildProtocolApplications>	
+		</Gel2DApplication>
+
+		<ExcisionApplication id="ex003:ExcisionApplication0"
 			ElectrophoresedGel_ref="ex003:Gel2D1" GenericProtocol_ref="ex003:GenericProtocol2">
-			<_inputImageLocations>
-				<LocationSet identifier="ex003:LocationSet1" Image_ref="ex003:Image3">
+			<inputImageLocations>				
+				<LocationSet id="ex003:LocationSet1" Image_ref="ex003:Image3">
 					<GelLocation name="example gel location (no genuine locations are known)"
-						identifier="ex003:GelLocation0">
+						id="ex003:GelLocation0">
 						<Circle centroidY="1" centroidX="1" pixelRadius="1"/>
 					</GelLocation>
 				</LocationSet>
-			</_inputImageLocations>
-
+			</inputImageLocations>
 			<ExcisedSample name="Details of excised samples would be entered here"
-				identifier="ex003:ExcisedSample0" GelLocation_ref="ex003:GelLocation0"></ExcisedSample>
-
+				id="ex003:ExcisedSample0" GelLocation_ref="ex003:GelLocation0"/>
+			
 		</ExcisionApplication>
-
-		<SampleLoadingApplication identifier="ex003:SampleLoadingApplication1"
-			SampleLoadingProtocol_ref="ex003:SampleLoadingProtocol1" Gel_ref="ex003:Gel2"/>
-
-		<_electrophoresisType OntologyTerm_ref="ex003:OntologyIndividual6"/>
-
-		<Gel2DApplication identifier="ex003:Gel2DApplication1"
-			Gel2DProtocol_ref="ex003:Gel2DProtocol1">
-			<fuge:ActionApplication identifier="ex003:ActionApp1" ProtocolApplication_ref="ex003:SampleLoadingApplication1"
-				Action_ref="ex003:SampleLoadingAction1"/>
-
-			<fuge:ActionApplication identifier="ex003:ActionApp2" ProtocolApplication_ref="ex003:ElectrophoresisApplication2"
-				Action_ref="ex003:FirstDimensionAction1"/>
-
-			<fuge:ActionApplication identifier="ex003:ActionApp3" ProtocolApplication_ref="ex003:ElectrophoresisApplication3"
-				Action_ref="ex003:SecondDimensionAction1"/>
-
-			<Gel2D name="Main prep gel for MS" identifier="ex003:Gel2D1">
-				<PHRange dimension="1">
-					<fuge:Range upperLimit="10" lowerLimit="3"/>
-				</PHRange>
-			</Gel2D>
-
-			<_inputFirstDimension>
-				<Gel name="Immobiline DryStrip pH 3–10 NL" identifier="ex003:Gel2"
-					separationDimension="1">
-					<Dimensions z="0" y="0" x="240">
-						<_dimensionUnit OntologyTerm_ref="ex003:OntologyIndividual3"/>
-
-					</Dimensions>
-
-
-				</Gel>
-
-			</_inputFirstDimension>
-
-			<_inputSecondDimension>
-				<Gel name="Slab gel for preparing spots for MS" identifier="ex003:Gel4"
-					separationDimension="2"/>
-			</_inputSecondDimension>
-
-		</Gel2DApplication>
-
-		<ElectrophoresisApplication
-			name="Application of electrophoresis on prep gel in 1st dimension"
-			identifier="ex003:ElectrophoresisApplication2"
-			ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol0" Gel_ref="ex003:Gel2"></ElectrophoresisApplication>
-
-		<ElectrophoresisApplication
-			name="Application of electrophoresis protocol in 2nd dimension of prep gel"
-			identifier="ex003:ElectrophoresisApplication3"
-			ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1" Gel_ref="ex003:Gel4"></ElectrophoresisApplication>
-
 	</Gel2DExperiment>
 
-	<fuge:OntologyCollection>
-	
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual0" term="hour"
-			termAccession="UO:0000032"
-			OntologySource_ref="ex003:OntologySource2"/>
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual1" term="volt"
-			termAccession="UO:0000218"
-			OntologySource_ref="ex003:OntologySource2"/>
-		
-	
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual2" term="Sypro_ruby"
-			termAccession="!! To come !!"
-			OntologySource_ref="ex003:OntologySource1"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual3" term="millimeter"
-			termAccession="UO:0000016"
-			OntologySource_ref="ex003:OntologySource2"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual4" term="kilodalton"
-			termAccession="UO:0000222"
-			OntologySource_ref="ex003:OntologySource2"/>
-	
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual5" term="volt-hour"
-			termAccession="UO:0000229"
-			OntologySource_ref="ex003:OntologySource2"/>
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual6"
-			term="two dimensional gel electrophoresis"
-			termAccession="sep:00155"
-			OntologySource_ref="ex003:OntologySource1"/>
-
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual9" term="Cy3_labelled"
-			termAccession="!!" OntologySource_ref="ex003:OntologySource1"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual10" term="Cy5_labelled"
-			termAccession="!!" OntologySource_ref="ex003:OntologySource1" />
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual11" term="Cy2_labelled"
-			termAccession="!!" OntologySource_ref="ex003:OntologySource1"/>
-
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual12" term="Cy2_excitation_wavelength"
-			termAccession="!!"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual13" term="Cy3_excitation_wavelength"
-			termAccession="!!"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual14" term="Cy5_excitation_wavelength"
-			termAccession="!!"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual15" term="dots per inch"
-			termAccession="UO:0000240" OntologySource_ref="ex003:OntologySource2"/>
-
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual16" term="Manufacturer"
-			termAccession="uri to come" OntologySource_ref="ex003:OntologySource1"/>
-
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual17" term="linear distribution"
-			termAccession="sep:00018" OntologySource_ref="ex003:OntologySource1"/>
-	
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual18" term="logarithmic distribution"
-			termAccession="sep:00019" OntologySource_ref="ex003:OntologySource1"/>
-	
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual19" term="principal investigator"
-			termAccession="sep:00035" OntologySource_ref="ex003:OntologySource1"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual20" term="hold mode"
-			termAccession="sep:00027" OntologySource_ref="ex003:OntologySource1"/>	
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual19" term="gradient"
-			termAccession="accession to come" OntologySource_ref="ex003:OntologySource1"/>
-
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual22" term="celcius"
-			termAccession="UO:0000027"
-			OntologySource_ref="ex003:OntologySource2"/>
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual23" term="watt"
-			termAccession="UO:0000114"
-			OntologySource_ref="ex003:OntologySource2"/>		
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual24" term="immobiline dry strip"
-			termAccession="sep:00131" OntologySource_ref="ex003:OntologySource1"/>
-		
-		<fuge:OntologyIndividual identifier="ex003:OntologyIndividual25"
-			term="difference gel electrophoresis"
-			termAccession="sep:00180"
-			OntologySource_ref="ex003:OntologySource1"/>
-		
-		<!-- Possible change to reference OBO repository!! -->
-		<fuge:OntologySource name="PSI-SEP CV" identifier="ex003:OntologySource1"
-			ontologyURI="http://psidev.sourceforge.net/gps/CV/sep.obo"/>
-		
-		<fuge:OntologySource ontologyURI="http://obo.cvs.sourceforge.net/obo/obo/ontology/phenotype/unit.obo?view=log" identifier="ex003:OntologySource1" name="OBO-unit"/>
-
-	</fuge:OntologyCollection>
-
-	<fuge:ReferenceableCollection>
-		<fuge:BibliographicReference
+	<pf:ReferenceableCollection>
+		<pf:BibliographicReference
 			name="(Note - info in volume should be moved to URI - Describable attributes are not implemented in Pedro)"
-			identifier="ex003:BibliographicReference0"
+			id="ex003:BibliographicReference0"
 			authors="J. Inagawa, J. Hirano, and S. Hattori"
 			volume="http://www5.amershambiosciences.com/APTRIX/upp01077.nsf/Content/lsn_online_article_281004_f?OpenDocument&amp;hometitle=lsn_online"
 			title="CyDye DIGE Fluor minimal dyes for tracking membrane protein abundance from epilepsy-induced rats : A clinical proteomic study"/>
 		
-	</fuge:ReferenceableCollection>
-	
+	</pf:ReferenceableCollection>	
 	
 
 </GelML>
