@@ -1,6 +1,6 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <GelML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate GelML-v1_1candidate.xsd"
+	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../schema/GelML-v1_1candidate.xsd"
 	xmlns="http://www.psidev.info/gelml/1_1candidate"
 	xmlns:pf="http://psidev.info/fuge-light/1.0"
  id="ex002:GelML:001">
@@ -39,7 +39,7 @@
 			bitDepth="14" dimensionX="2224" dimensionY="3000">
 			<resolution>
 				<pf:AtomicValue>
-					<pf:PropertyValue value="300" unitAccession="TO DO" unitCvRef="UO" unitName=""/>
+					<pf:PropertyValue value="300" unitAccession="TO DO" unitCvRef="UO" unitName="UO"/>
 				</pf:AtomicValue>
 			</resolution>
 		</Image>		
@@ -301,10 +301,9 @@
 					</GelLocation>
 					<GelLocation id="GL3">
 						<FeatureLocation centroidX="1268" centroidY="238"/>
-					</GelLocation>
-					
+					</GelLocation>					
 					<setType>
-						<pf:cvParam cvRef="" accession="" name=""/>
+						<pf:cvParam cvRef="sepCV" accession="picking gel feature location set" name="sep:00194"/>
 					</setType>
 				</LocationSet>
 			</inputGelLocations>			
