@@ -738,6 +738,10 @@ exact_synonym: "Brilliant Blue G 250" []
 exact_synonym: "C.I. 42655" []
 is_a: sep:00104 ! chemical substance
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_units UO:0000205 ! volume per unit volume
+relationship: has_units UO:0000165 ! volume percentage
+relationship: has_units UO:0000062 ! molar
+
 
 [Term]
 id: sep:00115
@@ -893,12 +897,20 @@ id: sep:00137
 name: SimplyBlue SafeStain
 def: "A SimplyBlue SafeStain is a biological stain product which is a fast, sensitive and safe Colloidal Coomassie G-250-based stain for nanogram-level detections of proteins, manufactured by Invitrogen." [Invitrogen:SimplyBlue SafeStain "www.invitrogen.com"]
 is_a: sep:00136 ! biological stain product
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_units UO:0000205 ! volume per unit volume
+relationship: has_units UO:0000165 ! volume percentage
+relationship: has_units UO:0000062 ! molar
 
 [Term]
 id: sep:00138
 name: SilverQuest Silver Stain
 def: "SilverQuest Silver Staining is a biological stain product that provides maximal silver staining sensitivity with minimal protein modification for optimal mass spectrometry results, manufactured by invitrogen." [Invitrogen:SilverQuest Silver Stain "www.invitrogen.com"]
 is_a: sep:00136 ! biological stain product
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_units UO:0000205 ! volume per unit volume
+relationship: has_units UO:0000165 ! volume percentage
+relationship: has_units UO:0000062 ! molar
 
 [Term]
 id: sep:00139
@@ -1213,6 +1225,9 @@ name: SYPRO Ruby
 def: "SYPRO Ruby is a biological stain product that is a ready to use, ultra sensitive, luminescent stain for the detection of proteins separated by PAGE. Designed especicially for 2D PAGE, SYPRO Ruby also performs impressively in PAGE and IEF gels. Stains glycoproteins, lipoproteins, calcium binding proteins, fibrillar proteins and others. Will not stain extraneous nucleic acids. Sensitive to 1 ng of protein." [Invitrogen:SYPRO Ruby "Invitrogen"]
 is_a: sep:00136 ! biological stain product
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
+relationship: has_units UO:0000205 ! volume per unit volume
+relationship: has_units UO:0000165 ! volume percentage
+relationship: has_units UO:0000062 ! molar
 
 [Term]
 id: sep:00189
