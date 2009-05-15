@@ -20,8 +20,9 @@
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00030" termName="position" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/gelml:GelMLMaterialCollection/pf:GenericMaterial/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R2">
+        <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/gelml:GelMLMaterialCollection/pf:GenericMaterial/pf:cvParam/@accession" cvTermsCombinationLogic="AND" requirementLevel="SHOULD" id="R2">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:0000196" termName="sample description" useTerm="true" allowChildren="false"/>
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:0000197" termName="sample volume" useTerm="true" allowChildren="false"/>
         </CvMappingRule>        
         
         <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/gelml:GelMLMaterialCollection/pf:GenericMaterial/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R2.1">
