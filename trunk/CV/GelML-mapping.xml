@@ -49,11 +49,27 @@
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00030" termName="position" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/pf:ContactRole/pf:role/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7.1">
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00189" termName="manufacturer" useTerm="true" allowChildren="true"/>
+        </CvMappingRule>        
+
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/pf:ContactRole/pf:role/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7.2">
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00189" termName="manufacturer" useTerm="true" allowChildren="true"/>
+        </CvMappingRule> 
+        
         <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/gelType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R8">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
         <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/gelType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R9">
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
+        </CvMappingRule>
+        
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/model/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R9.1">
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
+        </CvMappingRule>
+        
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/model/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R9.2">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
@@ -91,7 +107,7 @@
         
         <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/ExcisionApplication/inputGelLocations/LocationSet/setType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R18">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00193" termName="digital entity role" useTerm="false" allowChildren="true"/>
-        </CvMappingRule>                   
+        </CvMappingRule>                 
 
 
     </CvMappingRuleList>
