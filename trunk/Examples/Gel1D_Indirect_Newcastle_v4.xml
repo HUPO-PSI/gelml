@@ -1,46 +1,45 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <GelML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../schema/GelML-v1_1candidate.xsd"
+	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../Schema/GelML-v1_1candidate.xsd"
 	xmlns="http://www.psidev.info/gelml/1_1candidate"
-	xmlns:pf="http://psidev.info/fuge-light/1.0"
 	id="ex001:GelML:001">
 	
-	<pf:Provider id="ex001:Provider0">			
-		<pf:ContactRole Contact_ref="ex001:Person0">
-			<pf:role>
-				<pf:cvParam cvRef="sepCV" accession="sep:00035" name="principal investigator"/>
-			</pf:role>			
-		</pf:ContactRole>
-	</pf:Provider>
+	<Provider id="ex001:Provider0">			
+		<ContactRole Contact_ref="ex001:Person0">
+			<role>
+				<cvParam cvRef="sepCV" accession="sep:00035" name="principal investigator"/>
+			</role>			
+		</ContactRole>
+	</Provider>
 		
 	<cvList>
-		<pf:cv fullName="sepCV" URI="https://psidev.svn.sourceforge.net/svnroot/psidev/psi/sepcv/trunk/sep.obo" id="sepCV" version="TO DO" />
-		<pf:cv id="UO" fullName="Unit Ontology" URI="http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/unit.obo"/>
+		<cv fullName="sepCV" URI="https://psidev.svn.sourceforge.net/svnroot/psidev/psi/sepcv/trunk/sep.obo" id="sepCV" version="TO DO" />
+		<cv id="UO" fullName="Unit Ontology" URI="http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/unit.obo"/>
 	</cvList>
 	
 	<GelMLMaterialCollection>
-		<pf:GenericMaterial name="Human primary skeletal muscle cell extracts - sample 1" id="Sample1"/>
-		<pf:GenericMaterial name="Human primary skeletal muscle cell extracts - sample 2" id="Sample2"/>
-		<pf:GenericMaterial name="Human primary skeletal muscle cell extracts - sample 3" id="Sample3"/>
-		<pf:GenericMaterial name="Human primary skeletal muscle cell extracts - sample 4" id="Sample4"/>
-		<pf:GenericMaterial name="Human primary skeletal muscle cell extracts - sample 5" id="Sample5"/>
+		<GenericMaterial name="Human primary skeletal muscle cell extracts - sample 1" id="Sample1"/>
+		<GenericMaterial name="Human primary skeletal muscle cell extracts - sample 2" id="Sample2"/>
+		<GenericMaterial name="Human primary skeletal muscle cell extracts - sample 3" id="Sample3"/>
+		<GenericMaterial name="Human primary skeletal muscle cell extracts - sample 4" id="Sample4"/>
+		<GenericMaterial name="Human primary skeletal muscle cell extracts - sample 5" id="Sample5"/>
 
-		<pf:GenericMaterial id="ex001:GenericMaterial2" name="Tris-Cl, 0.378 M; 0.00347 M SDS; 0.00438 M ammonium persulphate; 4.3 E-4 M TEMED"/>	
+		<GenericMaterial id="ex001:GenericMaterial2" name="Tris-Cl, 0.378 M; 0.00347 M SDS; 0.00438 M ammonium persulphate; 4.3 E-4 M TEMED"/>	
 	</GelMLMaterialCollection>	
 
 	<GelMLDataCollection>
 		<Image name="231105" id="ex001:Image0" location="http://temp.uri.to.come"
 			bitDepth="16">					
 			<channel>
-				<pf:AtomicValue>
-					<pf:PropertyValue value="700" unitAccession="UO:0000241" unitCvRef="UO" unitName="micron"/>
-				</pf:AtomicValue>
+				<AtomicValue>
+					<PropertyValue value="700" unitAccession="UO:0000241" unitCvRef="UO" unitName="micron"/>
+				</AtomicValue>
 			</channel>
 	
 			<resolution>
-				<pf:AtomicValue>
-					<pf:PropertyValue value="150" unitName="dots per inch" unitCvRef="UO" unitAccession="UO:0000240"/>
-				</pf:AtomicValue>
+				<AtomicValue>
+					<PropertyValue value="150" unitName="dots per inch" unitCvRef="UO" unitAccession="UO:0000240"/>
+				</AtomicValue>
 			</resolution>		
 
 		</Image>
@@ -48,33 +47,19 @@
 	</GelMLDataCollection>
 	
 	<GelMLProtocolCollection>
-		<pf:GenericEquipment name="Enter details of e.g. gel tanks in here"
+		<GenericEquipment name="Enter details of e.g. gel tanks in here"
 			id="ex001:GenericEquipment0"/>
 		
-		<pf:GenericEquipment name="Li-Cor Odyssey (infrared imaging system)"
+		<GenericEquipment name="Li-Cor Odyssey (infrared imaging system)"
 			id="ex001:GenericEquipment1"/>
 		
-		<pf:GenericSoftware name="Li-Cor Odyssey software" id="ex001:GenericSoftware0"/>
+		<GenericSoftware name="Li-Cor Odyssey software" id="ex001:GenericSoftware0"/>
 		
 		
-		<ElectrophoresisProtocol name="Electrophoresis protocol (enter optional other name here)" id="ex001:ElectrophoresisProtocol0">					
-			<protocolText>
-				0.1 amperes, 20 minutes
-				0.25 amperes, 30 minutes				
-			</protocolText>			
-			<AddBufferAction id="ex001:AddBufferAction0"
-				SubstanceMixtureProtocol_ref="ex001:SubstanceMixtureProtocol0"/>			
-			<electrophoresisEquipment GenericEquipment_ref="ex001:GenericEquipment0"/>			
-		</ElectrophoresisProtocol>
-		
-		<DetectionProtocol
-			name="Protein transfer to PVDF membrane"
-			id="ex001:DetectionProtocol0">
-			<protocolText>immunoblotting followed by detection of fluorescent antibody</protocolText>
-			<DetectionAgent>
-				<pf:userParam name="rabbit anti-goat IgG, Alexa Fluor 680"/>
-			</DetectionAgent>			
-		</DetectionProtocol>
+		<GenericProtocol name="Image acquisition" id="ex001:GenericProtocol0">
+			<software GenericSoftware_ref="ex001:GenericSoftware0"/>
+			<equipment GenericEquipment_ref="ex001:GenericEquipment1"/>
+		</GenericProtocol>
 		
 		<SampleLoadingProtocol id="ex001:SampleLoadingProtocol0">
 			<protocolText>P036 lysate, 10 ug, 20 ul, well loading</protocolText>
@@ -92,28 +77,38 @@
 				ElectrophoresisProtocol_ref="ex001:ElectrophoresisProtocol0"/>			
 			<DetectionAction DetectionProtocol_ref="ex001:DetectionProtocol0" id="ex001:DetectionAction1"/>			
 		</Gel1DProtocol>
+				
+		<ElectrophoresisProtocol name="Electrophoresis protocol (enter optional other name here)" id="ex001:ElectrophoresisProtocol0">					
+			<protocolText>
+				0.1 amperes, 20 minutes
+				0.25 amperes, 30 minutes				
+			</protocolText>			
+			<AddBufferAction id="ex001:AddBufferAction0"
+				SubstanceMixtureProtocol_ref="ex001:SubstanceMixtureProtocol0"/>			
+			<electrophoresisEquipment GenericEquipment_ref="ex001:GenericEquipment0"/>			
+		</ElectrophoresisProtocol>
 		
 		<SubstanceMixtureProtocol id="ex001:SubstanceMixtureProtocol0"
 			mixtureName="Running buffer">
 			<SubstanceAction id="ex001:SubstanceAction6" substanceName="SDS">
 				<Concentration id="ex001:Concentration1">
-					<pf:AtomicValue>
-						<pf:PropertyValue value="0.00347" unitAccession="UO:0000062" unitCvRef="UO" unitName="molar"/>
-					</pf:AtomicValue>
+					<AtomicValue>
+						<PropertyValue value="0.00347" unitAccession="UO:0000062" unitCvRef="UO" unitName="molar"/>
+					</AtomicValue>
 				</Concentration>
 			</SubstanceAction>			
 			<SubstanceAction id="ex001:SubstanceAction8" substanceName="Tris-base">
 				<Concentration id="ex001:Concentration2">
-					<pf:AtomicValue>
-						<pf:PropertyValue value="25"/>
-					</pf:AtomicValue>
+					<AtomicValue>
+						<PropertyValue value="25"/>
+					</AtomicValue>
 				</Concentration>
 			</SubstanceAction>			
 			<SubstanceAction id="ex001:SubstanceAction9" substanceName="glycine">
 				<Concentration id="ex001:Concentration3">
-					<pf:AtomicValue>
-						<pf:PropertyValue value="0.192" unitAccession="UO:0000062" unitCvRef="UO" unitName="molar"/>
-					</pf:AtomicValue>
+					<AtomicValue>
+						<PropertyValue value="0.192" unitAccession="UO:0000062" unitCvRef="UO" unitName="molar"/>
+					</AtomicValue>
 				</Concentration>
 			</SubstanceAction>			
 		</SubstanceMixtureProtocol>
@@ -125,35 +120,40 @@
 			<SubstanceAction id="SA4" substanceName="0.004% bromphenol blue"/>
 			<SubstanceAction id="SA5" substanceName="0.125 M Tris HCl"/>
 		</SubstanceMixtureProtocol>
-						
-		<pf:GenericProtocol name="Image acquisition" id="ex001:GenericProtocol0">
-			<pf:software GenericSoftware_ref="ex001:GenericSoftware0"/>
-			<pf:equipment GenericEquipment_ref="ex001:GenericEquipment1"/>
-		</pf:GenericProtocol>
+		
+		<DetectionProtocol
+			name="Protein transfer to PVDF membrane"
+			id="ex001:DetectionProtocol0">
+			<protocolText>immunoblotting followed by detection of fluorescent antibody</protocolText>
+			<DetectionAgent>
+				<userParam name="rabbit anti-goat IgG, Alexa Fluor 680"/>
+			</DetectionAgent>			
+		</DetectionProtocol>
+
 		
 		<ImageAcquisitionProtocol id="ex001:ImageAcqProtocol0">			
 			<equipment GenericEquipment_ref="ex001:GenericEquipment1"/>
 			<software GenericSoftware_ref="ex001:GenericSoftware0"/>			
 			<AutoCalibration id="ex001:AutoCalib1">
-				<pf:BooleanValue value="true"/>
+				<BooleanValue value="true"/>
 			</AutoCalibration>			
-			<pf:GenericParameter name="Resolution" id="ex001:GenericParameter0">
-				<pf:AtomicValue>
-					<pf:PropertyValue value="169" unitName="nanometer" unitCvRef="UO" unitAccession="UO:0000018"/>
-				</pf:AtomicValue>				
-			</pf:GenericParameter>
+			<GenericParameter name="Resolution" id="ex001:GenericParameter0">
+				<AtomicValue>
+					<PropertyValue value="169" unitName="nanometer" unitCvRef="UO" unitAccession="UO:0000018"/>
+				</AtomicValue>				
+			</GenericParameter>
 		</ImageAcquisitionProtocol>		
 	</GelMLProtocolCollection>
 	
 	<Gel1DExperiment id="ex001:Gel1DExperiment0">			
 		<electrophoresisType>
-			<pf:cvParam cvRef="sepCV" accession="sep:00150" name="one dimensional gel electrophoresis"/>
+			<cvParam cvRef="sepCV" accession="sep:00150" name="one dimensional gel electrophoresis"/>
 		</electrophoresisType>		
-		<pf:ContactRole Contact_ref="ex001:Person0">			
-			<pf:role>
-				<pf:cvParam cvRef="sepCV" accession="sep:00035" name="principal investigator"/>
-			</pf:role>
-		</pf:ContactRole>				
+		<ContactRole Contact_ref="ex001:Person0">			
+			<role>
+				<cvParam cvRef="sepCV" accession="sep:00035" name="principal investigator"/>
+			</role>
+		</ContactRole>				
 		<Gel1DApplication id="ex001:Gel1DApplication0"
 			Gel1DProtocol_ref="ex001:Gel1DProtocol0">
 			<inputGel>
@@ -166,20 +166,20 @@
 	
 					<componentGels>
 						<Gel name="stack gel" id="ex001:Gel1">
-							<pf:userParam name="pH" unitAccession="UO:0000196" unitCvRef="UO" unitName="pH" value="8.8"/>						
+							<userParam name="pH" unitAccession="UO:0000196" unitCvRef="UO" unitName="pH" value="8.8"/>						
 						</Gel>							
 						<Gel name="Resolve gel" id="ex001:Gel2">
-							<pf:userParam name="pH" unitAccession="UO:0000196" unitCvRef="UO" unitName="pH" value="8.8"/>							
+							<userParam name="pH" unitAccession="UO:0000196" unitCvRef="UO" unitName="pH" value="8.8"/>							
 						</Gel>						
 					</componentGels>					
 					<percentAcrylamide>
-						<pf:AtomicValue>
-							<pf:PropertyValue value="8"/>
-						</pf:AtomicValue>
+						<AtomicValue>
+							<PropertyValue value="8"/>
+						</AtomicValue>
 					</percentAcrylamide>					
 					<AcrylamideToCrossLinker acrylamide="37.5" crossLinker="1">
 						<crossLinkerType>
-							<pf:cvParam cvRef="sepCV" accession="sep:00190" name="bisacrylamide" />
+							<cvParam cvRef="sepCV" accession="sep:00190" name="bisacrylamide" />
 						</crossLinkerType>
 					</AcrylamideToCrossLinker>					
 					<otherGelConstituents GenericMaterial_ref="ex001:GenericMaterial2"/>		
@@ -192,15 +192,17 @@
 			</inputGel>
 			<output>
 				<Gel1D id="ex001:Gel1D0">
-					<MolWeightRange dimension="1">
-						<pf:lowerLimit>
-							<pf:PropertyValue value="12" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
-						</pf:lowerLimit>
-						<pf:upperLimit>
-							<pf:PropertyValue value="120" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
-						</pf:upperLimit>
+					<MolWeightRange dimension="1">						
+						<Range>
+							<lowerLimit>
+								<PropertyValue value="12" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
+							</lowerLimit>
+							<upperLimit>
+								<PropertyValue value="120" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
+							</upperLimit>
+						</Range>		
 						<rangeType>
-							<pf:cvParam cvRef="sepCV" accession="sep:00018" name="linear distribution"/>
+							<cvParam cvRef="sepCV" accession="sep:00018" name="linear distribution"/>
 						</rangeType>						
 					</MolWeightRange>
 				</Gel1D>				
@@ -208,47 +210,47 @@
 			<ChildProtocolApplications>
 				<SampleLoadingApplication id="SLA1"	SampleLoadingProtocol_ref="ex001:SampleLoadingProtocol0" Gel_ref="ex001:Gel0" GelLane_ref="GelLane1">
 					<InputSample>
-						<pf:GenericMaterialMeasurement Material_ref="Sample1">
-							<pf:AtomicValue>
-								<pf:PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
-							</pf:AtomicValue>
-						</pf:GenericMaterialMeasurement>
+						<GenericMaterialMeasurement Material_ref="Sample1">
+							<AtomicValue>
+								<PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</AtomicValue>
+						</GenericMaterialMeasurement>
 					</InputSample>
 				</SampleLoadingApplication>
 				<SampleLoadingApplication id="SLA2"	SampleLoadingProtocol_ref="ex001:SampleLoadingProtocol0" Gel_ref="ex001:Gel0" GelLane_ref="GelLane2">
 					<InputSample>
-						<pf:GenericMaterialMeasurement Material_ref="Sample2">
-							<pf:AtomicValue>
-								<pf:PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
-							</pf:AtomicValue>
-						</pf:GenericMaterialMeasurement>
+						<GenericMaterialMeasurement Material_ref="Sample2">
+							<AtomicValue>
+								<PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</AtomicValue>
+						</GenericMaterialMeasurement>
 					</InputSample>
 				</SampleLoadingApplication>
 				<SampleLoadingApplication id="SLA3"	SampleLoadingProtocol_ref="ex001:SampleLoadingProtocol0" Gel_ref="ex001:Gel0" GelLane_ref="GelLane3">
 					<InputSample>
-						<pf:GenericMaterialMeasurement Material_ref="Sample3">
-							<pf:AtomicValue>
-								<pf:PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
-							</pf:AtomicValue>
-						</pf:GenericMaterialMeasurement>
+						<GenericMaterialMeasurement Material_ref="Sample3">
+							<AtomicValue>
+								<PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</AtomicValue>
+						</GenericMaterialMeasurement>
 					</InputSample>
 				</SampleLoadingApplication>
 				<SampleLoadingApplication id="SLA4"	SampleLoadingProtocol_ref="ex001:SampleLoadingProtocol0" Gel_ref="ex001:Gel0" GelLane_ref="GelLane4">
 					<InputSample>
-						<pf:GenericMaterialMeasurement Material_ref="Sample4">
-							<pf:AtomicValue>
-								<pf:PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
-							</pf:AtomicValue>
-						</pf:GenericMaterialMeasurement>
+						<GenericMaterialMeasurement Material_ref="Sample4">
+							<AtomicValue>
+								<PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</AtomicValue>
+						</GenericMaterialMeasurement>
 					</InputSample>
 				</SampleLoadingApplication>
 				<SampleLoadingApplication id="SLA5"	SampleLoadingProtocol_ref="ex001:SampleLoadingProtocol0" Gel_ref="ex001:Gel0" GelLane_ref="GelLane5">
 					<InputSample>
-						<pf:GenericMaterialMeasurement Material_ref="Sample5">
-							<pf:AtomicValue>
-								<pf:PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
-							</pf:AtomicValue>
-						</pf:GenericMaterialMeasurement>
+						<GenericMaterialMeasurement Material_ref="Sample5">
+							<AtomicValue>
+								<PropertyValue value="30" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+							</AtomicValue>
+						</GenericMaterialMeasurement>
 					</InputSample>
 				</SampleLoadingApplication>
 				<ElectrophoresisApplication id="ex001:ElectrophoresisApplication0" ElectrophoresisProtocol_ref="ex001:ElectrophoresisProtocol0" Gel_ref="ex001:Gel0"/>
@@ -266,11 +268,11 @@
 			Material_ref="ex001:TransferMedium0"></ImageAcquisitionApplication>		
 	</Gel1DExperiment>
 	
-	<pf:AuditCollection>
-		<pf:Person id="ex001:Person0" email="g.j.litherland@ncl.ac.uk" lastName="Litherland"
+	<AuditCollection>
+		<Person id="ex001:Person0" email="g.j.litherland@ncl.ac.uk" lastName="Litherland"
 			firstName="Gary"/>
-		<pf:Organization name="ICaMB" id="ex001:Organization0"
+		<Organization name="ICaMB" id="ex001:Organization0"
 			address="University of Newcastle upon Tyne"/>
-	</pf:AuditCollection>
+	</AuditCollection>
 
 </GelML>
