@@ -1,92 +1,96 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <GelML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../schema/GelML-v1_1candidate.xsd"
+	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../Schema/GelML-v1_1candidate.xsd"
 	xmlns="http://www.psidev.info/gelml/1_1candidate"
-	xmlns:pf="http://psidev.info/fuge-light/1.0"
  id="ex002:GelML:001">
 
-	<pf:Provider id="ex002:Provider0">
-		<pf:ContactRole Contact_ref="ex002:Person0">
-			<pf:role>
-				<pf:cvParam cvRef="sepCV" accession="sep:00035" name="principal investigator"/>
-			</pf:role>		
-		</pf:ContactRole>
-	</pf:Provider>
+	<Provider id="ex002:Provider0">
+		<ContactRole Contact_ref="ex002:Person0">
+			<role>
+				<cvParam cvRef="sepCV" accession="sep:00035" name="principle investigator"/>
+			</role>		
+		</ContactRole>
+	</Provider>
 	<cvList>
-		<pf:cv fullName="sepCV" URI="https://psidev.svn.sourceforge.net/svnroot/psidev/psi/sepcv/trunk/sep.obo" id="sepCV" version="TO DO" />
-		<pf:cv id="UO" fullName="Unit Ontology" URI="http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/unit.obo"/>
+		<cv fullName="sepCV" URI="http://code.google.com/p/gelml/source/browse/trunk/CV/sep.obo" id="sepCV" />
+		<cv id="UO" fullName="Unit Ontology" URI="http://code.google.com/p/gelml/source/browse/trunk/CV/unit.obo"/>
 	</cvList>
 	
 	<GelMLMaterialCollection>
-		<pf:GenericMaterial
+		<GenericMaterial
 			name="Wild type sample"
 			id="ex002:GenericMaterial0">
-			<pf:cvParam cvRef="sepCV" accession="TO DO" name="Sample description" value="Soluble protein extract from wild-type (Guy-11) mycelia of Magnaporthe grisea (our ref. S0161)"/>
-		</pf:GenericMaterial>
-		<pf:GenericMaterial name="Special buffer based on piperidinopropionamide (PPA)"
+				<cvParam cvRef="sepCV" accession="sep:0000196" name="sample description" value="Soluble protein extract from wild-type (Guy-11) mycelia of Magnaporthe grisea (our ref. S0161)"/>
+
+			</GenericMaterial>
+		<GenericMaterial name="Special buffer based on piperidinopropionamide (PPA)"
 			id="ex002:GenericMaterial2"/>
-		<pf:GenericMaterial
+		<GenericMaterial
 			name="Sample solution: Complete lysis solution: urea (6M), thiourea (2M), EDTA (1mM), DTT (50mM), Tris buffer pH10.8 (20mM), pepstatin (1.4µg/mL), Roche protease inhibitor cocktail (2.86x recommended concentration), CHAPS (4%), glycerol (10%), BDH ‘electran’ carrier ampholyte (2%)."
 			id="ex002:GenericMaterial3">
-			<pf:components GenericMaterial_ref="ex002:GenericMaterial0"/>
-		</pf:GenericMaterial>		
-		<pf:GenericMaterial id="Rehydration Solution1" name="Rehydration Solution: urea (7 M), thiourea (2 M), CHAPS (4%), DTT (0.4%), carrier ampholyte ‘Resolyte’ pH 4-8 (0.8%)">
-			<pf:cvParam cvRef="sepCV" accession="TO DO" name="Sample volume" value="20" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
-		</pf:GenericMaterial>
+			<components GenericMaterial_ref="ex002:GenericMaterial0"/>
+		</GenericMaterial>		
+		<GenericMaterial id="Rehydration Solution1" name="Rehydration Solution: urea (7 M), thiourea (2 M), CHAPS (4%), DTT (0.4%), carrier ampholyte ‘Resolyte’ pH 4-8 (0.8%)">
+			<cvParam cvRef="sepCV" accession="sep:0000197" name="sample volume" value="20" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+		</GenericMaterial>
 	</GelMLMaterialCollection>
 	<GelMLDataCollection>
 		<Image name="2L0433.tif" id="ex002:Image0" location="http://temp.uri.come"
 			bitDepth="14" dimensionX="2224" dimensionY="3000">
 			<resolution>
-				<pf:AtomicValue>
-					<pf:PropertyValue value="300" unitAccession="TO DO" unitCvRef="UO" unitName="UO"/>
-				</pf:AtomicValue>
+				<AtomicValue>
+					<PropertyValue value="300" unitAccession="TO DO" unitCvRef="UO" unitName="UO"/>
+				</AtomicValue>
 			</resolution>
 		</Image>		
 		
 	</GelMLDataCollection>
 	<GelMLProtocolCollection>
-		<pf:GenericEquipment name="Ettan DALT II Separation Unit and Power Supply/Control Unit "
+		<GenericEquipment name="Ettan DALT II Separation Unit and Power Supply/Control Unit "
 			id="ex002:GenericEquipment0"/>
-		<pf:GenericEquipment
+		<GenericEquipment
 			name="Gels and reagents contained in 14 L Sealfresh food storage boxes, approx. dimensions 290 x 290 x 160 mm (Stewart). Universal shaker SM-30, with to-and-fro motion (Edmund Buhler)."
 			id="ex002:GenericEquipment1"/>
-		<pf:GenericEquipment
+		<GenericEquipment
 			name="PowerLook 1120 Professional Scanner with UTA-1100 Transparency Adapter"
 			id="ex002:GenericEquipment2">
-			<pf:make>
-				<pf:userParam name="UMAX"/>
-			</pf:make>
-			<pf:model>
-				<pf:userParam name="PowerLook"/>
-			</pf:model>
-		</pf:GenericEquipment>
-		<pf:GenericSoftware name="MagicScan" id="ex002:GenericSoftware0" version="4.6"/>
-		<ElectrophoresisProtocol name="Isoelectric focusing"
-			id="ex002:ElectrophoresisProtocol0">
-			<protocolText> [All Protocol Text in here] 			
-			</protocolText>
-			<electrophoresisEquipment GenericEquipment_ref="ex002:GenericEquipment0"/>
-		</ElectrophoresisProtocol>
-		<ElectrophoresisProtocol name="2nd dimension electrophoresis"
-			id="ex002:ElectrophoresisProtocol1">
-			<protocolText> [All Protocol Text in here] 			
-			</protocolText>
-			<electrophoresisEquipment GenericEquipment_ref="ex002:GenericEquipment0"/>
-		</ElectrophoresisProtocol>
-		<DetectionProtocol name="Colloidal Coomassie Blue staining"
-			id="ex002:DetectionProtocol0">
-			<protocolText>Fixing: 2-3 hours with continuous shaking at ambient temperature, followed by 3 x 30-60 min washes in ultrapure water. Fixative: methanol (30%), phosphoric acid (2%)
-			
-			Equilibrate with continuous shaking (80 cycles/min) for 1 h then add Coomassie blue directly to solution and continue shaking for 4 days.
-			</protocolText>
-			<DetectionAgent>
-				<pf:cvParam cvRef="sepCV" accession="sep:00114" name="Coomassie blue" value="0.067" unitName="volume per unit volume" unitAccession="UO:0000205" unitCvRef="UO" />
-			</DetectionAgent>		
-			<detectionEquipment GenericEquipment_ref="ex002:GenericEquipment1"/>
-			<AddBufferAction id="ex002:AddBufferAction2" actionOrdinal="2"
-				SubstanceMixtureProtocol_ref="ex002:SubstanceMixtureProtocol0"/>
-		</DetectionProtocol>
+			<make>
+				<userParam name="UMAX"/>
+			</make>
+			<model>
+				<userParam name="PowerLook"/>
+			</model>
+		</GenericEquipment>
+		<GenericSoftware name="MagicScan" id="ex002:GenericSoftware0" version="4.6"/>
+
+
+
+		<GenericProtocol name="Image acquisition protocol" id="ex002:GenericProtocol0">			
+			<protocolText>Gel is placed directly onto plate, plastic backing side up, and scanned in transmissive mode using the transparency adapter.</protocolText>
+			<software GenericSoftware_ref="ex002:GenericSoftware0"/>
+			<equipment GenericEquipment_ref="ex002:GenericEquipment2"/>
+		</GenericProtocol>
+		<GenericProtocol name="Interdimension protocol-Rehydration"
+			id="GenProtocol_Interdimension_1">
+			<protocolText>Immobiline DryStrip was rehydrated overnight in the Ettan IPGphor Cup Loading Strip Holder in Rehydration Solution with a covering of Cover Fluid (mineral oil).</protocolText>
+		</GenericProtocol>
+		<GenericProtocol name="Equilibration, reduction &amp; alkylation"
+			id="ex002:GenericProtocol2">
+			<GenericAction id="ex002:GenericAction6" actionOrdinal="1"
+				actionText="First equilibration with DTT (10 mg/mL): 25 min"/>
+			<GenericAction id="ex002:GenericAction7"
+				actionText="Equilibration buffer: urea (6 M), Tris pH 8.8 (50 mM), glycerol (30%), SDS (2%), bromophenol blue (0.00125%)"/>
+			<GenericAction id="ex002:GenericAction8" actionOrdinal="2"
+				actionText="Second equilibration with iodoacetamide (25 mg/mL): 15 min"/>
+		</GenericProtocol>
+		<GenericProtocol id="ExcisionProtocol1">
+			<protocolText>[Protocol text in here]</protocolText>
+		</GenericProtocol>
+		<SampleLoadingProtocol
+			name="(Optionally enter name here and use GenericAction or SubstanceAction to describe sample loading)"
+			id="ex002:SampleLoadingProtocol0">
+			<protocolText>[Protocol text in here]</protocolText>
+		</SampleLoadingProtocol>
 		<Gel2DProtocol name="Enter a name for the Gel2D protocol here"
 			id="ex002:Gel2DProtocol0">
 			<SampleLoadingAction id="ex002:SampleLoadingAction0" actionOrdinal="1"
@@ -102,41 +106,40 @@
 			<DetectionAction DetectionProtocol_ref="ex002:DetectionProtocol0"
 				id="ex002:DetectionAction1"/>
 		</Gel2DProtocol>
-		<SampleLoadingProtocol
-			name="(Optionally enter name here and use GenericAction or SubstanceAction to describe sample loading)"
-			id="ex002:SampleLoadingProtocol0">
-			<protocolText>[Protocol text in here]</protocolText>
-		</SampleLoadingProtocol>
-		<pf:GenericProtocol name="Image acquisition protocol" id="ex002:GenericProtocol0">			
-			<pf:protocolText>Gel is placed directly onto plate, plastic backing side up, and scanned in transmissive mode using the transparency adapter.</pf:protocolText>
-			<pf:software GenericSoftware_ref="ex002:GenericSoftware0"/>
-			<pf:equipment GenericEquipment_ref="ex002:GenericEquipment2"/>
-		</pf:GenericProtocol>
-		<pf:GenericProtocol name="Interdimension protocol-Rehydration"
-			id="GenProtocol_Interdimension_1">
-			<pf:protocolText>Immobiline DryStrip was rehydrated overnight in the Ettan IPGphor Cup Loading Strip Holder in Rehydration Solution with a covering of Cover Fluid (mineral oil).</pf:protocolText>
-		</pf:GenericProtocol>
+		
+		<ElectrophoresisProtocol name="Isoelectric focusing"
+			id="ex002:ElectrophoresisProtocol0">
+			<protocolText> [All Protocol Text in here] 			
+			</protocolText>
+			<electrophoresisEquipment GenericEquipment_ref="ex002:GenericEquipment0"/>
+		</ElectrophoresisProtocol>
+		<ElectrophoresisProtocol name="2nd dimension electrophoresis"
+			id="ex002:ElectrophoresisProtocol1">
+			<protocolText> [All Protocol Text in here] 			
+			</protocolText>
+			<electrophoresisEquipment GenericEquipment_ref="ex002:GenericEquipment0"/>
+		</ElectrophoresisProtocol>
 		<SubstanceMixtureProtocol id="ex002:SubstanceMixtureProtocol0"
 			mixtureName="Equilibration buffer">
 			<SubstanceAction id="ex002:SubstanceAction1" substanceName="methanol">
 				<RelativeVolume id="ex002:RelativeVolume1">			
-					<pf:AtomicValue>
-						<pf:PropertyValue value="15"/>
-					</pf:AtomicValue>					
+					<AtomicValue>
+						<PropertyValue value="15"/>
+					</AtomicValue>					
 				</RelativeVolume>
 			</SubstanceAction>
 			<SubstanceAction id="ex002:SubstanceAction2" substanceName="ammonium sulphate">
 				<RelativeVolume id="">
-					<pf:AtomicValue>
-						<pf:PropertyValue value="17"/>
-					</pf:AtomicValue>									
+					<AtomicValue>
+						<PropertyValue value="17"/>
+					</AtomicValue>									
 				</RelativeVolume>
 			</SubstanceAction>
 			<SubstanceAction id="ex002:SubstanceAction3" substanceName="phosphoric acid">
 				<RelativeVolume id="ex002:RelativeVolume3">
-					<pf:AtomicValue>
-						<pf:PropertyValue value="2"/>
-					</pf:AtomicValue>					
+					<AtomicValue>
+						<PropertyValue value="2"/>
+					</AtomicValue>					
 				</RelativeVolume>
 			</SubstanceAction>
 		</SubstanceMixtureProtocol>
@@ -150,57 +153,59 @@
 			<SubstanceAction id="ex002:SubstanceAction6"	substanceName="50 mM diethanolamine (DEA)"/>
 			<SubstanceAction id="ex002:SubstanceAction7" substanceName="50 mM acetic acid"/>
 		</SubstanceMixtureProtocol>
-		<pf:GenericProtocol name="Equilibration, reduction &amp; alkylation"
-			id="ex002:GenericProtocol2">
-			<pf:GenericAction id="ex002:GenericAction6" actionOrdinal="1"
-				actionText="First equilibration with DTT (10 mg/mL): 25 min"/>
-			<pf:GenericAction id="ex002:GenericAction7"
-				actionText="Equilibration buffer: urea (6 M), Tris pH 8.8 (50 mM), glycerol (30%), SDS (2%), bromophenol blue (0.00125%)"/>
-			<pf:GenericAction id="ex002:GenericAction8" actionOrdinal="2"
-				actionText="Second equilibration with iodoacetamide (25 mg/mL): 15 min"/>
-		</pf:GenericProtocol>
-		<pf:GenericProtocol id="ExcisionProtocol1">
-			<pf:protocolText>[Protocol text in here]</pf:protocolText>
-		</pf:GenericProtocol>
+		
+		<DetectionProtocol name="Colloidal Coomassie Blue staining"
+			id="ex002:DetectionProtocol0">
+			<protocolText>Fixing: 2-3 hours with continuous shaking at ambient temperature, followed by 3 x 30-60 min washes in ultrapure water. Fixative: methanol (30%), phosphoric acid (2%)
+				
+				Equilibrate with continuous shaking (80 cycles/min) for 1 h then add Coomassie blue directly to solution and continue shaking for 4 days.
+			</protocolText>
+			<DetectionAgent>
+				<cvParam cvRef="sepCV" accession="sep:00114" name="Coomassie blue" value="0.067" unitName="volume per unit volume" unitAccession="UO:0000205" unitCvRef="UO" />
+			</DetectionAgent>		
+			<detectionEquipment GenericEquipment_ref="ex002:GenericEquipment1"/>
+			<AddBufferAction id="ex002:AddBufferAction2" actionOrdinal="2"
+				SubstanceMixtureProtocol_ref="ex002:SubstanceMixtureProtocol0"/>
+		</DetectionProtocol>
 	</GelMLProtocolCollection>
 	
 	
 	<Gel2DExperiment name="Optional name for this 2D Gel experiment"
 		id="ex002:Gel2DExperiment0">			
 		<electrophoresisType>
-			<pf:cvParam cvRef="sepCV" accession="sep:00155" name="two dimensional gel electrophoresis"/>
+			<cvParam cvRef="sepCV" accession="sep:00155" name="two dimensional gel electrophoresis"/>
 		</electrophoresisType>				
-		<pf:ContactRole Contact_ref="ex002:Person0">
-			<pf:role>
-				<pf:cvParam cvRef="sepCV" accession="sep:00035" name="principal investigator"/>
-			</pf:role>
-		</pf:ContactRole>
+		<ContactRole Contact_ref="ex002:Person0">
+			<role>
+				<cvParam cvRef="sepCV" accession="sep:00035" name="principle investigator"/>
+			</role>
+		</ContactRole>
 		<Gel2DApplication id="ex002:Gel2DApplication0" activityDate="2003-01-20T00:00:00"
 			Gel2DProtocol_ref="ex002:Gel2DProtocol0">						
 			<inputFirstDimension>
 				<Gel name="IPG strip, denaturing, bonded to polyester film backing"
 					id="ex002:Gel0" separationDimension="1">
-					<pf:ContactRole Contact_ref="ex002:Organization0">
-						<pf:role>
-							<pf:cvParam cvRef="sepCV" accession="sep:00189" name="Manufacturer"/>
-						</pf:role>
-					</pf:ContactRole>
+					<ContactRole Contact_ref="ex002:Organization0">
+						<role>
+							<cvParam cvRef="sepCV" accession="sep:00189" name="manufacturer"/>
+						</role>
+					</ContactRole>
 					<gelType>
-						<pf:cvParam cvRef="sepCV" accession="sep:00130" name="immobilized pH gradient gel" />
+						<cvParam cvRef="sepCV" accession="sep:00130" name="immobilized pH gradient gel" />
 					</gelType>
 					<percentAcrylamide>
-						<pf:AtomicValue>		
-							<pf:PropertyValue value="4"/>							
-						</pf:AtomicValue>		
+						<AtomicValue>		
+							<PropertyValue value="4"/>							
+						</AtomicValue>		
 					</percentAcrylamide>
 					<AcrylamideToCrossLinker acrylamide="97" crossLinker="3">
 						<crossLinkerType>
-							<pf:cvParam cvRef="sepCV" accession="sep:00190" name="bisacrylamide" />
+							<cvParam cvRef="sepCV" accession="sep:00190" name="bisacrylamide" />
 						</crossLinkerType>
 					</AcrylamideToCrossLinker>
 					<otherGelConstituents GenericMaterial_ref="Rehydration Solution1"/>
 					<model>
-						<pf:cvParam cvRef="sepCV" accession="sep:00131" name="immobiline dry strip"/>
+						<cvParam cvRef="sepCV" accession="sep:00131" name="immobiline dry strip"/>
 					</model>
 					<Dimensions>
 						<x value="240" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
@@ -212,26 +217,26 @@
 			<inputSecondDimension>
 				<Gel name="Slab gel, denaturing, single separation zone, bonded to polyester film backing" 
 					id="ex002:Gel1" separationDimension="2">					
-					<pf:ContactRole Contact_ref="ex002:Organization0">
-						<pf:role>
-							<pf:cvParam cvRef="sepCV" accession="sep:00189" name="Manufacturer"/>
-						</pf:role>
-					</pf:ContactRole>					
+					<ContactRole Contact_ref="ex002:Organization0">
+						<role>
+							<cvParam cvRef="sepCV" accession="sep:00189" name="manufacturer"/>
+						</role>
+					</ContactRole>					
 					<gelType>
-						<pf:cvParam cvRef="sepCV" accession="sep:00129" name="polyacrylamide gel" />
+						<cvParam cvRef="sepCV" accession="sep:00129" name="polyacrylamide gel" />
 					</gelType>
 					<percentAcrylamide>
-						<pf:AtomicValue>
-							<pf:PropertyValue value="12.5"/>
-						</pf:AtomicValue>						
+						<AtomicValue>
+							<PropertyValue value="12.5"/>
+						</AtomicValue>						
 					</percentAcrylamide>					
 					<AcrylamideToCrossLinker acrylamide="97" crossLinker="3">
 						<crossLinkerType>
-							<pf:cvParam cvRef="sepCV" accession="TO DO" name="bisacrylamide" />
+							<cvParam cvRef="sepCV" accession="sep:00190" name="bisacrylamide" />
 						</crossLinkerType>
 					</AcrylamideToCrossLinker>					
 					<model>
-						<pf:userParam name="DALT Gel 12.5"/>
+						<userParam name="DALT Gel 12.5"/>
 					</model>
 					<Dimensions>
 						<x value="255" unitName="millimeter" unitAccession="UO:0000016" unitCvRef="UO"/>
@@ -243,27 +248,27 @@
 			<output>				
 				<Gel2D id="ex002:Gel2D0">					
 					<PHRange dimension="1">
-						<pf:Range>
-							<pf:lowerLimit>
-								<pf:PropertyValue value="4"/>
-							</pf:lowerLimit>
-							<pf:upperLimit>
-								<pf:PropertyValue value="7"/>
-							</pf:upperLimit>
-						</pf:Range>
+						<Range>
+							<lowerLimit>
+								<PropertyValue value="4"/>
+							</lowerLimit>
+							<upperLimit>
+								<PropertyValue value="7"/>
+							</upperLimit>
+						</Range>
 						<rangeType>
-							<pf:cvParam cvRef="sepCV" accession="sep:00019" name="logarithmic distribution"/>
+							<cvParam cvRef="sepCV" accession="sep:00019" name="logarithmic distribution"/>
 						</rangeType>
 					</PHRange>					
 					<MolWeightRange dimension="2">						
-						<pf:Range>
-							<pf:lowerLimit>
-								<pf:PropertyValue value="12" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
-							</pf:lowerLimit>
-							<pf:upperLimit>
-								<pf:PropertyValue value="120" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
-							</pf:upperLimit>
-						</pf:Range>	
+						<Range>
+							<lowerLimit>
+								<PropertyValue value="12" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
+							</lowerLimit>
+							<upperLimit>
+								<PropertyValue value="120" unitName="kilodaltons" unitCvRef="UO" unitAccession="UO:0000222"/>
+							</upperLimit>
+						</Range>	
 					</MolWeightRange>					
 				</Gel2D>
 			</output>			
@@ -271,11 +276,11 @@
 				<SampleLoadingApplication id="ex002:SampleLoadingApplication0"
 					SampleLoadingProtocol_ref="ex002:SampleLoadingProtocol0" Gel_ref="ex002:Gel0">
 					<InputSample>
-						<pf:GenericMaterialMeasurement Material_ref="ex002:GenericMaterial3">						
-							<pf:AtomicValue>
-								<pf:PropertyValue value="30" unitName="milliliter" unitAccession="UO:0000098"/>
-							</pf:AtomicValue>						
-						</pf:GenericMaterialMeasurement>
+						<GenericMaterialMeasurement Material_ref="ex002:GenericMaterial3">						
+							<AtomicValue>
+								<PropertyValue value="30" unitName="milliliter" unitAccession="UO:0000098"/>
+							</AtomicValue>						
+						</GenericMaterialMeasurement>
 					</InputSample>					
 				</SampleLoadingApplication>
 				<ElectrophoresisApplication ElectrophoresisProtocol_ref="ex002:ElectrophoresisProtocol0" Gel_ref="ex002:Gel0" id="ElectApp1"/>
@@ -303,24 +308,22 @@
 						<FeatureLocation centroidX="1268" centroidY="238"/>
 					</GelLocation>					
 					<setType>
-						<pf:cvParam cvRef="sepCV" accession="picking gel feature location set" name="sep:00194"/>
+						<cvParam cvRef="sepCV" accession="sep:00194" name="picking gel feature location set"/>					
 					</setType>
 				</LocationSet>
 			</inputGelLocations>			
 		</ExcisionApplication>
-	</Gel2DExperiment>	
+	</Gel2DExperiment>		
 	
-	
-	
-	<pf:AuditCollection>
-		<pf:Organization name="Amersham Biosciences" id="ex002:Organization0"/>
-		<pf:Person id="ex002:Person0" lastName="Brown" firstName="Alistair">
-			<pf:affiliations Organization_ref="ex002:Organization1"/>
-		</pf:Person>
-		<pf:Organization id="ex002:Organization1"
+	<AuditCollection>
+		<Organization name="Amersham Biosciences" id="ex002:Organization0"/>
+		<Person id="ex002:Person0" lastName="Brown" firstName="Alistair">
+			<affiliations Organization_ref="ex002:Organization1"/>
+		</Person>
+		<Organization id="ex002:Organization1"
 			address="School of Medical Sciences, University of Aberdeen, Aberdeen, AB25 2ZD, UK"/>
-	</pf:AuditCollection>
-	<pf:ReferenceableCollection>		
-	</pf:ReferenceableCollection>
+	</AuditCollection>
+	<ReferenceableCollection>		
+	</ReferenceableCollection>
 	
 </GelML>
