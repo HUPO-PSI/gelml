@@ -33,7 +33,7 @@
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00048" termName="image file format" useTerm="false" allowChildren="false"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLProtocolCollection/DetectionProtocol/gelml2:DetectionAgent/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R4">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLProtocolCollection/DetectionProtocol/DetectionAgent/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R4">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00136" termName="biological stain product" useTerm="false" allowChildren="true"/>
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="sep:00104" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
@@ -109,6 +109,10 @@
         <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/ExcisionApplication/inputGelLocations/LocationSet/setType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R18">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00193" termName="digital entity role" useTerm="false" allowChildren="true"/>
         </CvMappingRule>                 
+
+        <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLProtocolCollection/SubstanceMixtureProtocol/mixtureType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R19">
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00115" termName="solution" useTerm="false" allowChildren="true"/>
+        </CvMappingRule> 
 
 
     </CvMappingRuleList>

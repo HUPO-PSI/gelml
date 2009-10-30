@@ -13,7 +13,7 @@
   xmlns:gelml="http://www.psidev.info/gelml/1_1candidate"
   >
 
-  <xsd:include schemaLocation="FuGElight_working.xsd"/>
+  <xsd:include schemaLocation="FuGElightv1.0.0.xsd"/>
 
  <xsd:complexType name="GelML.GelMLRoot.GelMLType" abstract="false">
   <xsd:annotation>
@@ -1379,7 +1379,7 @@
        2. </xsd:documentation>
      </xsd:annotation>
     </xsd:attribute>
-    <xsd:attribute name="Protocol_ref" use="required" type="xsd:string">
+    <xsd:attribute name="GenericProtocol_ref" use="required" type="xsd:string">
      <xsd:annotation>
       <xsd:documentation>
        <p> A reference to the GenericProtocol performed between the dimensions specified. </p>
@@ -1647,21 +1647,84 @@
    <xsd:field xpath="@id"/>
   </xsd:unique>
   
+  <!--  
   <xsd:unique name="PK_Protocols">
    <xsd:selector xpath="./gelml:GelMLProtocolCollection/*"/>
    <xsd:field xpath="@id"/>
   </xsd:unique>
+  -->
+  
+  <xsd:unique name="PK_GenericProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:GenericProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_DetectionProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:DetectionProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_ImageAcquisitionProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:ImageAcquisitionProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_SubstanceMixtureProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:SubstanceMixtureProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_SampleLoadingProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:SampleLoadingProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_ElectrophoresisProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:ElectrophoresisProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_Gel2DProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:Gel2DProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_Gel1DProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:Gel1DProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_OtherGelProtocol">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:OtherGelProtocol"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_GenericEquipment">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:GenericEquipment"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_GenericSoftware">
+   <xsd:selector xpath="./gelml:GelMLProtocolCollection/gelml:GenericSoftware"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
 
-  <xsd:unique name="PK_Experiments">
-   <xsd:selector xpath="./*"/>
+  <xsd:unique name="PK_Gel2DExperiment">
+   <xsd:selector xpath="./gelml:Gel2DExperiment"/>
    <xsd:field xpath="@id"/>
   </xsd:unique>
   
-  <xsd:unique name="PK_Gel2DExp">
-   <xsd:selector xpath="./gelml:Gel2DExperiment/*"/>
+  <xsd:unique name="PK_Gel1DExperiment">
+   <xsd:selector xpath="./gelml:Gel1DExperiment"/>
    <xsd:field xpath="@id"/>
   </xsd:unique>
   
+  <xsd:unique name="PK_OtherGelExperiment">
+   <xsd:selector xpath="./gelml:OtherGelExperiment"/>
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+
   <xsd:unique name="PK_Audit">
    <xsd:selector xpath="./gelml:AuditCollection/*"/>
    <xsd:field xpath="@id"/>
@@ -1676,6 +1739,12 @@
    <xsd:selector xpath="./gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:inputGel/*"/>   
    <xsd:field xpath="@id"/>
   </xsd:unique>
+  
+  <xsd:unique name="PK_OtherGel_Gel">   
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:inputGels/*"/>   
+   <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
   
   <xsd:unique name="PK_2DGelMaterials">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:output/gelml:Gel2D|gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection/gelml:TransferMedium|gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection/gelml:DetectionMedium"/>
@@ -1696,6 +1765,13 @@
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:ExcisionApplication/gelml:inputGelLocations/gelml:LocationSet/gelml:GelLocation"></xsd:selector>
    <xsd:field xpath="@id"></xsd:field>
   </xsd:unique>
+  
+  <xsd:unique name="PK_OtherGel_GelLocations">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ExcisionApplication/gelml:inputGelLocations/gelml:LocationSet/gelml:GelLocation"></xsd:selector>
+   <xsd:field xpath="@id"></xsd:field>
+  </xsd:unique>
+  
+  
   
   <xsd:unique name="PK_GelLanes">
    <xsd:selector xpath="./*/*/*/gelml:Gel/gelml:GelLane"></xsd:selector>
@@ -1783,43 +1859,43 @@
    <xsd:selector xpath="./gelml:GelMLMaterialCollection/gelml:GenericMaterial/gelml:components"/>
    <xsd:field xpath="@GenericMaterial_ref"></xsd:field>
   </xsd:keyref>  
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_elecEquip">
+  <xsd:keyref refer="gelml:PK_GenericEquipment" name="FK_elecEquip">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:ElectrophoresisProtocol/gelml:electrophoresisEquipment"/>
    <xsd:field xpath="@GenericEquipment_ref"/>
   </xsd:keyref>  
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_detectEquip">
+  <xsd:keyref refer="gelml:PK_GenericEquipment" name="FK_detectEquip">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:DetectionProtocol/gelml:detectionEquipment"/>
    <xsd:field xpath="@GenericEquipment_ref"/>
   </xsd:keyref>  
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_AddBufferAction">
+  <xsd:keyref refer="gelml:PK_SubstanceMixtureProtocol" name="FK_AddBufferAction">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/*/gelml:AddBufferAction|gelml:GelMLProtocolCollection/*/*/gelml:AddBufferAction"/>
    <xsd:field xpath="@SubstanceMixtureProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_SampleLoadingAction">
+  <xsd:keyref refer="gelml:PK_SampleLoadingProtocol" name="FK_SampleLoadingAction">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:Gel2DProtocol/gelml:SampleLoadingAction"/>
    <xsd:field xpath="@SampleLoadingProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_FirstDimensionAction">
+  <xsd:keyref refer="gelml:PK_ElectrophoresisProtocol" name="FK_FirstDimensionAction">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:Gel2DProtocol/gelml:FirstDimensionAction"/>
    <xsd:field xpath="@ElectrophoresisProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_SecondDimensionAction">
+  <xsd:keyref refer="gelml:PK_ElectrophoresisProtocol" name="FK_SecondDimensionAction">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:Gel2DProtocol/gelml:SecondDimensionAction"/>
    <xsd:field xpath="@ElectrophoresisProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_InterDimensionAction">
+  <xsd:keyref refer="gelml:PK_GenericProtocol" name="FK_InterDimensionAction">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:Gel2DProtocol/gelml:InterDimensionAction"/>
-   <xsd:field xpath="@Protocol_ref"/>
+   <xsd:field xpath="@GenericProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_DetectionAction">
+  <xsd:keyref refer="gelml:PK_DetectionProtocol" name="FK_DetectionAction">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:Gel2DProtocol/gelml:DetectionAction"/>
    <xsd:field xpath="@DetectionProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Protocol2Software">
+  <xsd:keyref refer="gelml:PK_GenericSoftware" name="FK_Protocol2Software">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:GenericProtocol/gelml:software"/>
    <xsd:field xpath="@GenericSoftware_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Protocol2Equipment">
+  <xsd:keyref refer="gelml:PK_GenericEquipment" name="FK_Protocol2Equipment">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:GenericProtocol/gelml:equipment"/>
    <xsd:field xpath="@GenericEquipment_ref"/>
   </xsd:keyref>
@@ -1834,16 +1910,24 @@
   <xsd:keyref refer="gelml:PK_Audit" name="FK_OTHERCONTACT">
    <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:ContactRole"></xsd:selector>
    <xsd:field xpath="@Contact_ref"></xsd:field>
-  </xsd:keyref>  
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel2DProtocol">
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_GenericProtocol" name="FK_OtherInterDimensionAction">
+   <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:OtherGelProtocol/gelml:InterDimensionAction"/>
+   <xsd:field xpath="@GenericProtocol_ref"/>
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_ElectrophoresisProtocol" name="FK_OtherDimensionAction">
+   <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:OtherGelProtocol/gelml:DimensionAction"/>
+   <xsd:field xpath="@ElectrophoresisProtocol_ref"/>
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_Gel2DProtocol" name="FK_Gel2DProtocol">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:Gel2DApplication"/>
    <xsd:field xpath="@Gel2DProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel1DProtocol">
+  <xsd:keyref refer="gelml:PK_Gel1DProtocol" name="FK_Gel1DProtocol">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:Gel1DApplication"/>
    <xsd:field xpath="@Gel1DProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_OtherGelProtocol">
+  <xsd:keyref refer="gelml:PK_OtherGelProtocol" name="FK_OtherGelProtocol">
    <xsd:selector xpath="gelml:OtherGelExperiment/gelml:OtherGelApplication"/>
    <xsd:field xpath="@OtherGelProtocol_ref"/>
   </xsd:keyref>  
@@ -1859,7 +1943,7 @@
    <xsd:selector xpath="./gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:inputFirstDimension/gelml:Gel/gelml:otherGelConstituents"/>
    <xsd:field xpath="@GenericMaterial_ref"></xsd:field>
   </xsd:keyref>  
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel2DSampleLoad">
+  <xsd:keyref refer="gelml:PK_SampleLoadingProtocol" name="FK_Gel2DSampleLoad">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication"/>
    <xsd:field xpath="@SampleLoadingProtocol_ref"/>
   </xsd:keyref>  
@@ -1871,7 +1955,7 @@
    <xsd:selector xpath="./gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication/gelml:InputSample/gelml:GenericMaterialMeasurement"/>
    <xsd:field xpath="@Material_ref"></xsd:field>
   </xsd:keyref>  
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel2DElect">
+  <xsd:keyref refer="gelml:PK_ElectrophoresisProtocol" name="FK_Gel2DElect">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:ElectrophoresisApplication"/>
    <xsd:field xpath="@ElectrophoresisProtocol_ref"/>
   </xsd:keyref>  
@@ -1879,19 +1963,23 @@
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:ElectrophoresisApplication"/>
    <xsd:field xpath="@Gel_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel2DDDetect">
+  <xsd:keyref refer="gelml:PK_DetectionProtocol" name="FK_Gel2DDDetect">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:DirectDetection"/>
    <xsd:field xpath="@DetectionProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel2DInDetect">
+  <xsd:keyref refer="gelml:PK_DetectionProtocol" name="FK_Gel2DInDetect">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:Gel2DApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection"/>
    <xsd:field xpath="@DetectionProtocol_ref"/>
   </xsd:keyref> 
   <xsd:keyref refer="gelml:PK_Data" name="FK_Gel2DImage">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:ImageAcquisitionApplication"/>
    <xsd:field xpath="@Image_ref"/>
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_GenericEquipment" name="FK_ImageProtocolEquipment">
+   <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:ImageAcquisitionProtocol/gelml:equipment"/>
+   <xsd:field xpath="@GenericEquipment_ref"/>
   </xsd:keyref> 
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel2DImageProtocol">
+  <xsd:keyref refer="gelml:PK_ImageAcquisitionProtocol" name="FK_Gel2DImageProtocol">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:ImageAcquisitionApplication"/>
    <xsd:field xpath="@ImageAcquisitionProtocol_ref"/>
   </xsd:keyref> 
@@ -1903,7 +1991,7 @@
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:ExcisionApplication"/>
    <xsd:field xpath="@ElectrophoresedGel_ref"></xsd:field>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel2DExcisedProtocol">
+  <xsd:keyref refer="gelml:PK_GenericProtocol" name="FK_Gel2DExcisedProtocol">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:ExcisionApplication"/>
    <xsd:field xpath="@GenericProtocol_ref"/>
   </xsd:keyref> 
@@ -1924,7 +2012,7 @@
    <xsd:field xpath="@GenericMaterial_ref"></xsd:field>
   </xsd:keyref>  
   
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel1DSampleLoad">
+  <xsd:keyref refer="gelml:PK_SampleLoadingProtocol" name="FK_Gel1DSampleLoad">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication"/>
    <xsd:field xpath="@SampleLoadingProtocol_ref"/>
   </xsd:keyref>  
@@ -1936,7 +2024,7 @@
    <xsd:selector xpath="./gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication/gelml:InputSample/gelml:GenericMaterialMeasurement"/>
    <xsd:field xpath="@Material_ref"></xsd:field>
   </xsd:keyref>  
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel1DElect">
+  <xsd:keyref refer="gelml:PK_ElectrophoresisProtocol" name="FK_Gel1DElect">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:ElectrophoresisApplication"/>
    <xsd:field xpath="@ElectrophoresisProtocol_ref"/>
   </xsd:keyref>  
@@ -1944,11 +2032,11 @@
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:ElectrophoresisApplication"/>
    <xsd:field xpath="@Gel_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel1DDDetect">
+  <xsd:keyref refer="gelml:PK_DetectionProtocol" name="FK_Gel1DDDetect">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:DirectDetection"/>
    <xsd:field xpath="@DetectionProtocol_ref"/>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel1DInDetect">
+  <xsd:keyref refer="gelml:PK_DetectionProtocol" name="FK_Gel1DInDetect">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection"/>
    <xsd:field xpath="@DetectionProtocol_ref"/>
   </xsd:keyref> 
@@ -1956,7 +2044,7 @@
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:ImageAcquisitionApplication"/>
    <xsd:field xpath="@Image_ref"/>
   </xsd:keyref> 
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel1DImageProtocol">
+  <xsd:keyref refer="gelml:PK_ImageAcquisitionProtocol" name="FK_Gel1DImageProtocol">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:ImageAcquisitionApplication"/>
    <xsd:field xpath="@ImageAcquisitionProtocol_ref"/>
   </xsd:keyref> 
@@ -1968,7 +2056,7 @@
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:ExcisionApplication"/>
    <xsd:field xpath="@ElectrophoresedGel_ref"></xsd:field>
   </xsd:keyref> 
-  <xsd:keyref refer="gelml:PK_Protocols" name="FK_Gel1DExcisedProtocol">
+  <xsd:keyref refer="gelml:PK_GenericProtocol" name="FK_Gel1DExcisedProtocol">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:ExcisionApplication"/>
    <xsd:field xpath="@GenericProtocol_ref"/>
   </xsd:keyref> 
@@ -1980,6 +2068,78 @@
    <xsd:selector xpath="./*/*/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication"/>
    <xsd:field xpath="@GelLane_ref"></xsd:field>
   </xsd:keyref>  
+  
+  <!-- OtherGelType key refs -->
+  
+  <xsd:keyref refer="gelml:PK_Audit" name="FK_OtherGEL_CONTACT">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:inputGels/gelml:Gel/gelml:ContactRole"></xsd:selector>
+   <xsd:field xpath="@Contact_ref"></xsd:field>
+  </xsd:keyref>
+
+  
+  <xsd:keyref refer="gelml:PK_Materials" name="FK_OtherGELCONSTIT">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:inputGels/gelml:Gel/gelml:otherGelConstituents"/>
+   <xsd:field xpath="@GenericMaterial_ref"></xsd:field>
+  </xsd:keyref>  
+  
+  <xsd:keyref refer="gelml:PK_SampleLoadingProtocol" name="FK_OtherGelSampleLoad">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication"/>
+   <xsd:field xpath="@SampleLoadingProtocol_ref"/>
+  </xsd:keyref>
+  
+  
+  <xsd:keyref refer="gelml:PK_OtherGel_Gel" name="FK_OtherGelGelLoad">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication"/>
+   <xsd:field xpath="@Gel_ref"/>
+  </xsd:keyref> 
+  <xsd:keyref refer="gelml:PK_Materials" name="FK_OtherGELINPUT">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication/gelml:InputSample/gelml:GenericMaterialMeasurement"/>
+   <xsd:field xpath="@Material_ref"></xsd:field>
+  </xsd:keyref>  
+  <xsd:keyref refer="gelml:PK_ElectrophoresisProtocol" name="FK_OtherGelElect">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:ElectrophoresisApplication"/>
+   <xsd:field xpath="@ElectrophoresisProtocol_ref"/>
+  </xsd:keyref>  
+  <xsd:keyref refer="gelml:PK_OtherGel_Gel" name="FK_OtherGel_GelElect">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:ElectrophoresisApplication"/>
+   <xsd:field xpath="@Gel_ref"/>
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_DetectionProtocol" name="FK_OtherGel_Detect">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:DirectDetection"/>
+   <xsd:field xpath="@DetectionProtocol_ref"/>
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_DetectionProtocol" name="FK_OtherGel_InDetect">
+   <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection"/>
+   <xsd:field xpath="@DetectionProtocol_ref"/>
+  </xsd:keyref> 
+  <xsd:keyref refer="gelml:PK_Data" name="FK_OtherGelImage">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ImageAcquisitionApplication"/>
+   <xsd:field xpath="@Image_ref"/>
+  </xsd:keyref> 
+  <xsd:keyref refer="gelml:PK_ImageAcquisitionProtocol" name="FK_OtherGelImageProtocol">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ImageAcquisitionApplication"/>
+   <xsd:field xpath="@ImageAcquisitionProtocol_ref"/>
+  </xsd:keyref> 
+  <xsd:keyref refer="gelml:PK_1DGelMaterials" name="FK_OtherGelImageMaterial">
+   <xsd:selector xpath="gelml:OtherGelDExperiment/gelml:ImageAcquisitionApplication"/>
+   <xsd:field xpath="@Material_ref"></xsd:field>
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_1DGelMaterials" name="FK_OtherGelExcised">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ExcisionApplication"/>
+   <xsd:field xpath="@ElectrophoresedGel_ref"></xsd:field>
+  </xsd:keyref> 
+  <xsd:keyref refer="gelml:PK_GenericProtocol" name="FK_OtherGelDExcisedProtocol">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ExcisionApplication"/>
+   <xsd:field xpath="@GenericProtocol_ref"/>
+  </xsd:keyref> 
+  <xsd:keyref refer="gelml:PK_OtherGel_GelLocations" name="FK_OtherGelExcisedSample">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ExcisionApplication/gelml:ExcisedSample"/>
+   <xsd:field xpath="@GelLocation_ref"/>
+  </xsd:keyref> 
+ 
+  
+  
+  
   
 
  </xsd:element>
