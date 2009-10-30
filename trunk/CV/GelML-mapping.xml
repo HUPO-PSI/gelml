@@ -16,97 +16,97 @@
 
     <CvMappingRuleList>      
         
-        <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/pf:Provider/pf:ContactRole/pf:role/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R1">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Provider/ContactRole/role/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R1">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00030" termName="position" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/gelml:GelMLMaterialCollection/pf:GenericMaterial/pf:cvParam/@accession" cvTermsCombinationLogic="AND" requirementLevel="SHOULD" id="R2">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLMaterialCollection/GenericMaterial/cvParam/@accession" cvTermsCombinationLogic="AND" requirementLevel="SHOULD" id="R2">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:0000196" termName="sample description" useTerm="true" allowChildren="false"/>
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:0000197" termName="sample volume" useTerm="true" allowChildren="false"/>
         </CvMappingRule>        
         
-        <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/gelml:GelMLMaterialCollection/pf:GenericMaterial/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R2.1">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLMaterialCollection/GenericMaterial/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R2.1">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="chemical substance" useTerm="true" allowChildren="false"/>
         </CvMappingRule>   
         
-        <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/gelml:GelMLDataCollection/gelml:Image/pf:fileFormat/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R3">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLDataCollection/Image/fileFormat/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R3">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00048" termName="image file format" useTerm="false" allowChildren="false"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/gelml:GelML/gelml:GelMLProtocolCollection/gelml:DetectionProtocol/gelml2:DetectionAgent/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R4">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLProtocolCollection/DetectionProtocol/gelml2:DetectionAgent/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R4">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00136" termName="biological stain product" useTerm="false" allowChildren="true"/>
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="sep:00104" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/electrophoresisType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R5">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/electrophoresisType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R5">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00155" termName="two dimensional gel electrophoresis" useTerm="true" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/electrophoresisType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R6">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/electrophoresisType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R6">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00150" termName="one dimensional gel electrophoresis" useTerm="true" allowChildren="true"/>
         </CvMappingRule>        
 
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/pf:ContactRole/pf:role/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/ContactRole/role/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00030" termName="position" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/pf:ContactRole/pf:role/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7.1">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/ContactRole/role/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7.1">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00189" termName="manufacturer" useTerm="true" allowChildren="true"/>
         </CvMappingRule>        
 
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/pf:ContactRole/pf:role/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7.2">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/ContactRole/role/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R7.2">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00189" termName="manufacturer" useTerm="true" allowChildren="true"/>
         </CvMappingRule> 
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/gelType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R8">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/gelType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R8">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/gelType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R9">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/gelType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R9">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/model/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R9.1">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/model/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R9.1">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/model/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R9.2">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/model/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R9.2">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/inputGel/Gel/gelType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R10">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/inputGel/Gel/gelType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R10">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00110" termName="gel" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/output/Gel2D/PHRange/rangeType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R11">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/output/Gel2D/PHRange/rangeType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R11">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00009" termName="distribution" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/output/Gel2D/MolWeightRange/rangeType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R12">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/output/Gel2D/MolWeightRange/rangeType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R12">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00009" termName="distribution" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/output/Gel1D/MolWeightRange/rangeType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R13">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/output/Gel1D/MolWeightRange/rangeType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R13">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00009" termName="distribution" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/output/Gel1D/PHRange/rangeType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R14">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/output/Gel1D/PHRange/rangeType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R14">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00009" termName="distribution" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/AcrylamideToCrossLinker/crossLinkerType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R15">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputSecondDimension/Gel/AcrylamideToCrossLinker/crossLinkerType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R15">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="chemical substance" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/AcrylamideToCrossLinker/crossLinkerType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R16">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/Gel2DApplication/inputFirstDimension/Gel/AcrylamideToCrossLinker/crossLinkerType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R16">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="chemical substance" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/inputGel/Gel/AcrylamideToCrossLinker/crossLinkerType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R17">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel1DExperiment/Gel1DApplication/inputGel/Gel/AcrylamideToCrossLinker/crossLinkerType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R17">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="chemical substance" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
-        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/ExcisionApplication/inputGelLocations/LocationSet/setType/pf:cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R18">
+        <CvMappingRule scopePath="" cvElementPath="/GelML/Gel2DExperiment/ExcisionApplication/inputGelLocations/LocationSet/setType/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MUST" id="R18">
             <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00193" termName="digital entity role" useTerm="false" allowChildren="true"/>
         </CvMappingRule>                 
 
