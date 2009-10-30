@@ -1754,7 +1754,13 @@
   <xsd:unique name="PK_1DGelMaterials">
    <xsd:selector xpath="gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:output/gelml:Gel1D|gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection/gelml:TransferMedium|gelml:Gel1DExperiment/gelml:Gel1DApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection/gelml:DetectionMedium"/>
    <xsd:field xpath="@id"/>
+  </xsd:unique>
+  
+  <xsd:unique name="PK_OtherGelMaterials">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:output/gelml:OtherGel|gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection/gelml:TransferMedium|gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:IndirectDetection/gelml:DetectionMedium"/>
+   <xsd:field xpath="@id"/>
   </xsd:unique> 
+  
   
   <xsd:unique name="PK_GelLocations">
    <xsd:selector xpath="gelml:Gel2DExperiment/gelml:ExcisionApplication/*/*/gelml:GelLocation"></xsd:selector>
@@ -2120,11 +2126,11 @@
    <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ImageAcquisitionApplication"/>
    <xsd:field xpath="@ImageAcquisitionProtocol_ref"/>
   </xsd:keyref> 
-  <xsd:keyref refer="gelml:PK_1DGelMaterials" name="FK_OtherGelImageMaterial">
-   <xsd:selector xpath="gelml:OtherGelDExperiment/gelml:ImageAcquisitionApplication"/>
+  <xsd:keyref refer="gelml:PK_OtherGelMaterials" name="FK_OtherGelImageMaterial">
+   <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ImageAcquisitionApplication"/>
    <xsd:field xpath="@Material_ref"></xsd:field>
   </xsd:keyref>
-  <xsd:keyref refer="gelml:PK_1DGelMaterials" name="FK_OtherGelExcised">
+  <xsd:keyref refer="gelml:PK_OtherGelMaterials" name="FK_OtherGelExcised">
    <xsd:selector xpath="gelml:OtherGelExperiment/gelml:ExcisionApplication"/>
    <xsd:field xpath="@ElectrophoresedGel_ref"></xsd:field>
   </xsd:keyref> 
