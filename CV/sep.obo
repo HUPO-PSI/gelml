@@ -720,7 +720,11 @@ xref: value-type:xsd\:float "The allowed value-type for this CV term."
 relationship: has_units UO:0000205 ! volume per unit volume
 relationship: has_units UO:0000165 ! volume percentage
 relationship: has_units UO:0000062 ! molar
-
+relationship: has_units UO:0000187 ! percent
+relationship: has_units UO:0000063 ! millimolar
+relationship: has_units UO:0000176 ! milligram per milliliter 
+relationship: has_units UO:0000101 ! microliter
+relationship: has_units UO:0000173 ! gram per milliliter
 
 [Term]
 id: sep:00115
@@ -880,6 +884,11 @@ xref: value-type:xsd\:float "The allowed value-type for this CV term."
 relationship: has_units UO:0000205 ! volume per unit volume
 relationship: has_units UO:0000165 ! volume percentage
 relationship: has_units UO:0000062 ! molar
+relationship: has_units UO:0000187 ! percent
+relationship: has_units UO:0000063 ! millimolar
+relationship: has_units UO:0000176 ! milligram per milliliter 
+relationship: has_units UO:0000101 ! microliter
+relationship: has_units UO:0000173 ! gram per milliliter
 
 [Term]
 id: sep:00138
@@ -890,6 +899,11 @@ xref: value-type:xsd\:float "The allowed value-type for this CV term."
 relationship: has_units UO:0000205 ! volume per unit volume
 relationship: has_units UO:0000165 ! volume percentage
 relationship: has_units UO:0000062 ! molar
+relationship: has_units UO:0000187 ! percent
+relationship: has_units UO:0000063 ! millimolar
+relationship: has_units UO:0000176 ! milligram per milliliter 
+relationship: has_units UO:0000101 ! microliter
+relationship: has_units UO:0000173 ! gram per milliliter
 
 [Term]
 id: sep:00139
@@ -1207,6 +1221,11 @@ xref: value-type:xsd\:float "The allowed value-type for this CV term."
 relationship: has_units UO:0000205 ! volume per unit volume
 relationship: has_units UO:0000165 ! volume percentage
 relationship: has_units UO:0000062 ! molar
+relationship: has_units UO:0000187 ! percent
+relationship: has_units UO:0000063 ! millimolar
+relationship: has_units UO:0000176 ! milligram per milliliter 
+relationship: has_units UO:0000101 ! microliter
+relationship: has_units UO:0000173 ! gram per milliliter
 
 [Term]
 id: sep:00189
@@ -1255,14 +1274,14 @@ id: sep:00196
 name: sample description
 def: "A description of the biological sample analysed." [PSI:SP\:9999 "SP"]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: sep:0000195 ! biological sample
+is_a: sep:00195 ! biological sample
 
 [Term]
 id: sep:00197
 name: sample volume
 def: "Volume of sample analysed." [PSI:SP\:9999 "SP"]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
-is_a: sep:0000195 ! biological sample
+is_a: sep:00195 ! biological sample
 relationship: has_units UO:0000098 ! milliliter
 relationship: has_units UO:0000101 ! microliter
 
