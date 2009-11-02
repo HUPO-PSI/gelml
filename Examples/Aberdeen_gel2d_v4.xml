@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <GelML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../Schema/GelML-v1_1candidate.xsd"
-	xmlns="http://www.psidev.info/gelml/1_1candidate"
+ xsi:schemaLocation="http://www.psidev.info/gelml/1_1candidate ../Schema/GelML-v1_1candidate.xsd"
+ xmlns="http://www.psidev.info/gelml/1_1candidate"
  id="ex002:GelML:001">
 
 	<Provider id="ex002:Provider0">
@@ -63,13 +63,8 @@
 		</GenericEquipment>
 		<GenericSoftware name="MagicScan" id="ex002:GenericSoftware0" version="4.6"/>
 
-
-
-		<GenericProtocol name="Image acquisition protocol" id="ex002:GenericProtocol0">			
-			<protocolText>Gel is placed directly onto plate, plastic backing side up, and scanned in transmissive mode using the transparency adapter.</protocolText>
-			<software GenericSoftware_ref="ex002:GenericSoftware0"/>
-			<equipment GenericEquipment_ref="ex002:GenericEquipment2"/>
-		</GenericProtocol>
+	
+	
 		<GenericProtocol name="Interdimension protocol-Rehydration"
 			id="GenProtocol_Interdimension_1">
 			<protocolText>Immobiline DryStrip was rehydrated overnight in the Ettan IPGphor Cup Loading Strip Holder in Rehydration Solution with a covering of Cover Fluid (mineral oil).</protocolText>
@@ -100,9 +95,9 @@
 			<SecondDimensionAction id="ex002:SecondDimensionAction0" actionOrdinal="5"
 				ElectrophoresisProtocol_ref="ex002:ElectrophoresisProtocol1"/>
 			<InterDimensionAction id="ex002:InterDimensionAction0" actionOrdinal="3"
-				preDimension="2" Protocol_ref="GenProtocol_Interdimension_1"/>
+				preDimension="2" GenericProtocol_ref="GenProtocol_Interdimension_1"/>
 			<InterDimensionAction id="ex002:InterDimensionAction1" actionOrdinal="4"
-				preDimension="2" Protocol_ref="ex002:GenericProtocol2"/>
+				preDimension="2" GenericProtocol_ref="ex002:GenericProtocol2"/>
 			<DetectionAction DetectionProtocol_ref="ex002:DetectionProtocol0"
 				id="ex002:DetectionAction1"/>
 		</Gel2DProtocol>
@@ -167,6 +162,12 @@
 			<AddBufferAction id="ex002:AddBufferAction2" actionOrdinal="2"
 				SubstanceMixtureProtocol_ref="ex002:SubstanceMixtureProtocol0"/>
 		</DetectionProtocol>
+		
+		<ImageAcquisitionProtocol id="ex002:ImagingProtocol1">
+			<protocolText>Gel is placed directly onto plate, plastic backing side up, and scanned in transmissive mode using the transparency adapter.</protocolText>
+			<equipment GenericEquipment_ref="ex002:GenericEquipment2"/>
+			<software GenericSoftware_ref="ex002:GenericSoftware0"/>
+		</ImageAcquisitionProtocol>
 	</GelMLProtocolCollection>
 	
 	
@@ -290,7 +291,7 @@
 		</Gel2DApplication>
 		
 		<ImageAcquisitionApplication id="ex002:ImageAcquisitionApplication0"
-		Image_ref="ex002:Image0" ImageAcquisitionProtocol_ref="ex002:GenericProtocol0" Material_ref="ex002:Gel2D0"/>
+			Image_ref="ex002:Image0" ImageAcquisitionProtocol_ref="ex002:ImagingProtocol1" Material_ref="ex002:Gel2D0"/>
 		
 		<ExcisionApplication ElectrophoresedGel_ref="ex002:Gel2D0" GenericProtocol_ref="ExcisionProtocol1" id="ExcisionApplication1">
 			<ExcisedSample GelLocation_ref="GL1" id="ExcisedSample1"/>

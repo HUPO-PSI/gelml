@@ -1578,6 +1578,12 @@
   <xsd:complexContent>
    <xsd:extension base="FuGE.Common.Protocol.ProtocolType">
     <xsd:sequence>
+     <xsd:element name="protocolText">
+      <xsd:annotation>
+       <xsd:documentation> The details of the Protocol as free text.
+       </xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
      <xsd:element name="equipment" minOccurs="1" maxOccurs="unbounded">
       <xsd:annotation>
        <xsd:documentation> The Equipment used for image acquisition. </xsd:documentation>
@@ -1608,12 +1614,6 @@
      <xsd:element ref="AutoCalibration" minOccurs="0" maxOccurs="1"/>
      <xsd:element ref="GenericParameter" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="protocolText" type="xsd:string">
-     <xsd:annotation>
-      <xsd:documentation> The details of the SampleLoadingProtocol as free text.
-      </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>

@@ -21,12 +21,12 @@
         </CvMappingRule>
         
         <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLMaterialCollection/GenericMaterial/cvParam/@accession" cvTermsCombinationLogic="AND" requirementLevel="SHOULD" id="R2">
-            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:0000196" termName="sample description" useTerm="true" allowChildren="false"/>
-            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:0000197" termName="sample volume" useTerm="true" allowChildren="false"/>
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00196" termName="sample description" useTerm="true" allowChildren="false"/>            
         </CvMappingRule>        
         
         <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLMaterialCollection/GenericMaterial/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R2.1">
-            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="chemical substance" useTerm="true" allowChildren="false"/>
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00104" termName="chemical substance" useTerm="false" allowChildren="true"/>
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00197" termName="sample volume" useTerm="true" allowChildren="false"/>
         </CvMappingRule>   
         
         <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLDataCollection/Image/fileFormat/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R3">

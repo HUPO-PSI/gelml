@@ -11,27 +11,6 @@ name: entity
 def: "This is the root node of the ontology to provide controlled vocabulary terms protein separation based experiments." [PSI:GEL "The PSI Working group for gels"]
 
 [Term]
-id: sep:0000195
-name: biological sample
-def: "A biological sample analysed by a particular technology." [SP:9999]
-is_a: sep:00103 ! biological substance
-
-[Term]
-id: sep:0000196
-name: sample description
-def: "A description of the biological sample analysed." [PSI:SP\:9999 "SP"]
-xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: sep:0000195 ! biological sample
-
-[Term]
-id: sep:0000197
-name: sample volume
-def: "Volume of sample analysed." [PSI:SP\:9999 "SP"]
-xref: value-type:xsd\:float "The allowed value-type for this CV term."
-is_a: sep:0000195 ! biological sample
-relationship: has_units UO:0000098 ! milliliter
-
-[Term]
 id: sep:00002
 name: abstract
 def: "Properties or qualities as distinguished from any  particular embodiment of the properties/qualities in a physical medium. Instances of Abstract can be said to exist in the same sense as mathematical objects such as sets and relations, but they cannot exist at a particular place and time without some physical encoding or embodiment." [SUMO:abstract "Suggested Upper Merged Ontology"]
@@ -1264,6 +1243,36 @@ id: sep:00194
 name: picking gel feature location set
 def: "def" [def:add]
 is_a: sep:00193 ! digital entity role
+
+[Term]
+id: sep:00195
+name: biological sample
+def: "A biological sample analysed by a particular technology." [SP:9999]
+is_a: sep:00103 ! biological substance
+
+[Term]
+id: sep:00196
+name: sample description
+def: "A description of the biological sample analysed." [PSI:SP\:9999 "SP"]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: sep:0000195 ! biological sample
+
+[Term]
+id: sep:00197
+name: sample volume
+def: "Volume of sample analysed." [PSI:SP\:9999 "SP"]
+xref: value-type:xsd\:float "The allowed value-type for this CV term."
+is_a: sep:0000195 ! biological sample
+relationship: has_units UO:0000098 ! milliliter
+relationship: has_units UO:0000101 ! microliter
+
+
+[Term]
+id: sep:00198
+name: equilibration buffer
+def: "A buffer intended to maintain the pH in a range appropriate for electrophoresis." [PSI:SP\:9999 "SP"]
+is_a: sep:00118 ! buffer solution
+
 
 [Typedef]
 id: has_units
