@@ -725,6 +725,7 @@ relationship: has_units UO:0000063 ! millimolar
 relationship: has_units UO:0000176 ! milligram per milliliter 
 relationship: has_units UO:0000101 ! microliter
 relationship: has_units UO:0000173 ! gram per milliliter
+relationship: has_units UO:0000098 ! milliliter
 
 [Term]
 id: sep:00115
@@ -889,6 +890,8 @@ relationship: has_units UO:0000063 ! millimolar
 relationship: has_units UO:0000176 ! milligram per milliliter 
 relationship: has_units UO:0000101 ! microliter
 relationship: has_units UO:0000173 ! gram per milliliter
+relationship: has_units UO:0000098 ! milliliter
+
 
 [Term]
 id: sep:00138
@@ -904,6 +907,8 @@ relationship: has_units UO:0000063 ! millimolar
 relationship: has_units UO:0000176 ! milligram per milliliter 
 relationship: has_units UO:0000101 ! microliter
 relationship: has_units UO:0000173 ! gram per milliliter
+relationship: has_units UO:0000098 ! milliliter
+
 
 [Term]
 id: sep:00139
@@ -1226,6 +1231,8 @@ relationship: has_units UO:0000063 ! millimolar
 relationship: has_units UO:0000176 ! milligram per milliliter 
 relationship: has_units UO:0000101 ! microliter
 relationship: has_units UO:0000173 ! gram per milliliter
+relationship: has_units UO:0000098 ! milliliter
+
 
 [Term]
 id: sep:00189
