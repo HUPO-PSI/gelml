@@ -19,7 +19,7 @@
 		</GenericMaterial>
 
 		<GenericMaterial name="Pooled Sample" id="ex003:GenericMaterial2">
-			<cvParam cvRef="sepCV" accession="sep:00183" name="Cy5"/>
+			<cvParam cvRef="sepCV" accession="sep:00183" name="Cy2"/>
 		</GenericMaterial>
 		
 		<GenericMaterial name="Sample for prep gel" id="ex003:GenericMaterial3"/>
@@ -64,12 +64,7 @@
 		<GenericEquipment name="Ettan DALTtwelve Large Vertical System"
 			id="ex003:GenericEquipment0"/>
 
-		<GenericEquipment name="Typhoon 9400 Variable Imager" id="ex003:GenericEquipment1"/>
-
-
-		<GenericProtocol name="DIGE Image acquisition protocol" id="ex003:GenericProtocol0">
-			<protocolText>[describe image acquistion in here, optionally enter details of equipment, parameters, etc below]</protocolText>
-		</GenericProtocol>
+		<GenericEquipment name="Typhoon 9400 Variable Imager" id="ex003:GenericEquipment1"/>		
 		
 		<GenericProtocol name="Rehydration" id="ex003:GenericProtocol1">
 			<protocolText>rehydration for 10 h</protocolText>
@@ -98,7 +93,7 @@
 			<SecondDimensionAction id="ex003:SecondDimensionAction0" actionOrdinal="4"
 				ElectrophoresisProtocol_ref="ex003:ElectrophoresisProtocol1"/>
 			<InterDimensionAction id="ex003:InterDimensionAction0" actionOrdinal="3"
-				preDimension="2" Protocol_ref="ex003:GenericProtocol1"/>
+				preDimension="2" GenericProtocol_ref="ex003:GenericProtocol1"/>
 		</Gel2DProtocol>
 
 		<Gel2DProtocol name="Protocol for 2D prep gel" id="ex003:Gel2DProtocol1">
@@ -127,9 +122,14 @@
 			id="ex003:DetectionProtocol0">
 			<protocolText>[Protocol text in here]</protocolText>
 			<DetectionAgent>
-				<cvParam cvRef="sepCV" accession="sep:00188" name="SYPRO Ruby"/>
+				<cvParam cvRef="sepCV" accession="sep:00188" name="SYPRO Ruby" unitAccession="UO:0000098" unitCvRef="UO" unitName="milliliter" value="100"/>
 			</DetectionAgent>
 		</DetectionProtocol>
+		
+		<ImageAcquisitionProtocol id="ex003:ImageProtocol1">
+			<protocolText>[Scanning protocol in here]</protocolText>
+			<equipment GenericEquipment_ref="ex003:GenericEquipment1"/>
+		</ImageAcquisitionProtocol>
 	</GelMLProtocolCollection>
 
 	<Gel2DExperiment name="Description of DIGE gels" id="ex003:Gel2DExperiment0">	
@@ -212,13 +212,13 @@
 		</Gel2DApplication>
 		
 		<ImageAcquisitionApplication id="ex003:ImageAcquisitionApplication0"
-			Image_ref="ex003:Image0" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
+			Image_ref="ex003:Image0" ImageAcquisitionProtocol_ref="ex003:ImageProtocol1"
 			Material_ref="ex003:Gel2D0"/>
 		<ImageAcquisitionApplication id="ex003:ImageAcquisitionApplication1"
-			Image_ref="ex003:Image1" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
+			Image_ref="ex003:Image1" ImageAcquisitionProtocol_ref="ex003:ImageProtocol1"
 			Material_ref="ex003:Gel2D0"/>
 		<ImageAcquisitionApplication id="ex003:ImageAcquisitionApplication2"
-			Image_ref="ex003:Image2" ImageAcquisitionProtocol_ref="ex003:GenericProtocol0"
+			Image_ref="ex003:Image2" ImageAcquisitionProtocol_ref="ex003:ImageProtocol1"
 			Material_ref="ex003:Gel2D0"></ImageAcquisitionApplication>
 
 

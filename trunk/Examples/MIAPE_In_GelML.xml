@@ -12,7 +12,7 @@
     
     <GelMLMaterialCollection>        
         <GenericMaterial id="Material:SDS" name="SDS">
-            <cvParam cvRef="sepCV" accession="TO DO" name="material description" value="linear distribution of SDS: 8-16"/>
+            <cvParam cvRef="sepCV" accession="sep:00196" name="sample description" value="linear distribution of SDS: 8-16"/>
         </GenericMaterial>
         
         <GenericMaterial id="ex01:GenericMaterial1"/>
@@ -88,7 +88,7 @@
             <SampleLoadingAction SampleLoadingProtocol_ref="ex01:SampleLoadProtocol1" id="SLA1"/>            
             <FirstDimensionAction ElectrophoresisProtocol_ref="ex002:ElectrophoresisProtocol0" id="FDA1"/>            
             <SecondDimensionAction ElectrophoresisProtocol_ref="ex002:ElectrophoresisProtocol1" id="FDA2"/>
-            <InterDimensionAction Protocol_ref="ex001:GenericProtocol1" id="IDA1"/>
+            <InterDimensionAction GenericProtocol_ref="ex001:GenericProtocol1" id="IDA1"/>
         </Gel2DProtocol>               
         
         <ElectrophoresisProtocol name="Isoelectric focusing"
@@ -131,7 +131,7 @@
         <DetectionProtocol id="ex01:DetectProtocol1">
             <protocolText>[Protocol text in here]</protocolText>            
             <DetectionAgent>
-                <cvParam cvRef="sepCV" accession="" name="[stain name in here - sepCV contains several stains]" value="[amount]" unitCvRef="UO" unitAccession="UO:0000101" unitName="microliter"/>
+                <cvParam cvRef="sepCV" accession="sep:00114" name="Coomassie blue" value="0.067" unitName="volume per unit volume" unitAccession="UO:0000205" unitCvRef="UO" />
             </DetectionAgent>
         </DetectionProtocol>         
                 
@@ -139,13 +139,14 @@
             <protocolText>Protein transfer to PVDF membrane – immunoblotting followed by detection of fluorescent antibody</protocolText>
 
             <DetectionAgent>
-                <userParam name="fluorescent antibody - use a CV param if possible" value="25"  unitCvRef="UO" unitAccession="UO:0000101" unitName="microliter"/>
+                <userParam name="fluorescent antibody" value="25"  unitCvRef="UO" unitAccession="UO:0000101" unitName="microliter"/>
             </DetectionAgent>
             <AddBufferAction SubstanceMixtureProtocol_ref="SubMixture3" id="ABA1"/>  
         </DetectionProtocol>        
         
-        <ImageAcquisitionProtocol id="ex001:ImageAcqProtocol1" protocolText="[Enter protocol text in here]">
-            <equipment GenericEquipment_ref="ex001:GenericEquipment2"/>
+        <ImageAcquisitionProtocol id="ex001:ImageAcqProtocol1">
+            <protocolText>[Enter protocol text in here]</protocolText>
+            <equipment GenericEquipment_ref="ex002:GenericEquipment2"/>
             <AutoCalibration id="ex001:AutoCalib1">
                 <BooleanValue value="true"/>
             </AutoCalibration>  
@@ -158,11 +159,6 @@
         <Gel2DApplication Gel2DProtocol_ref="ex06:Gel2DProtocol1" id="ex06:Gel2DApp1">            
             <inputFirstDimension>
                 <Gel id="ex001:Gel1" name="[e.g. IPG strip name]" batchNumber="[batchNumber]">                    
-                    <ContactRole Contact_ref="ex001:Contact2">
-                        <role>
-                            <cvParam cvRef="sepCV" accession="sep:00035" name="principal investigator"/>
-                        </role>
-                    </ContactRole>
                     <gelType>
                         <cvParam cvRef="sepCV" accession="sep:00130" name="immobilized pH gradient gel" />
                     </gelType>

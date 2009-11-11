@@ -20,7 +20,7 @@
 		<GenericMaterial
 			name="Wild type sample"
 			id="ex002:GenericMaterial0">
-				<cvParam cvRef="sepCV" accession="sep:0000196" name="sample description" value="Soluble protein extract from wild-type (Guy-11) mycelia of Magnaporthe grisea (our ref. S0161)"/>
+				<cvParam cvRef="sepCV" accession="sep:00196" name="sample description" value="Soluble protein extract from wild-type (Guy-11) mycelia of Magnaporthe grisea (our ref. S0161)"/>
 
 			</GenericMaterial>
 		<GenericMaterial name="Special buffer based on piperidinopropionamide (PPA)"
@@ -31,7 +31,7 @@
 			<components GenericMaterial_ref="ex002:GenericMaterial0"/>
 		</GenericMaterial>		
 		<GenericMaterial id="Rehydration Solution1" name="Rehydration Solution: urea (7 M), thiourea (2 M), CHAPS (4%), DTT (0.4%), carrier ampholyte ‘Resolyte’ pH 4-8 (0.8%)">
-			<cvParam cvRef="sepCV" accession="sep:0000197" name="sample volume" value="20" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
+			<cvParam cvRef="sepCV" accession="sep:00197" name="sample volume" value="20" unitCvRef="UO" unitAccession="UO:0000098" unitName="milliliter"/>
 		</GenericMaterial>
 	</GelMLMaterialCollection>
 	<GelMLDataCollection>
