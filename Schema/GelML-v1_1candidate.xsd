@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- 
-<xsd:schema targetNamespace="http://www.psidev.info/gelml/1_1candidate" xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
- xmlns="http://www.psidev.info/gelml/1_1candidate" elementFormDefault="qualified" version="1.1-candidate">
--->
-  
+ 
  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://www.psidev.info/gelml/1_1candidate"
   targetNamespace="http://www.psidev.info/gelml/1_1candidate"
@@ -79,8 +74,7 @@
  </xsd:complexType>
  <xsd:complexType name="GelML.GelMLRoot.GelMLProtocolCollectionType" abstract="false">
   <xsd:annotation>
-   <xsd:documentation> Collection class for accessing all Software, Protocol, Equipment and
-    GenericProtocolApplications. </xsd:documentation>
+   <xsd:documentation> Collection class for accessing all Software, Protocol and Equipment instances. </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="GenericEquipment" minOccurs="0" maxOccurs="unbounded"/>
@@ -200,7 +194,7 @@
  <xsd:complexType name="GelML.SelectSubstance.SubstanceActionType" abstract="false">
   <xsd:annotation>
    <xsd:documentation> An action representing the use of a substance within a protocol. The
-    substance can be named by free text or using the OntologyTerm association. The attribute
+    substance can be named by free text or using the substanceType association. The attribute
     actionText can be used to specify how the substance has been used within the protocol.
    </xsd:documentation>
   </xsd:annotation>
