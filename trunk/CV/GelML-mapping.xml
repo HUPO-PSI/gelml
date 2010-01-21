@@ -30,7 +30,7 @@
         </CvMappingRule>   
         
         <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLDataCollection/Image/fileFormat/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="SHOULD" id="R3">
-            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00048" termName="image file format" useTerm="true" allowChildren="true"/>
+            <CvTerm cvIdentifierRef="sepCV" termAccession="sep:00048" termName="image file format" useTerm="false" allowChildren="true"/>
         </CvMappingRule>
         
         <CvMappingRule scopePath="" cvElementPath="/GelML/GelMLProtocolCollection/DetectionProtocol/DetectionAgent/cvParam/@accession" cvTermsCombinationLogic="OR" requirementLevel="MAY" id="R4">
