@@ -1572,7 +1572,7 @@
   <xsd:complexContent>
    <xsd:extension base="FuGE.Common.Protocol.ProtocolType">
     <xsd:sequence>
-     <xsd:element name="protocolText">
+     <xsd:element name="protocolText" type="xsd:string">
       <xsd:annotation>
        <xsd:documentation> The details of the Protocol as free text.
        </xsd:documentation>
