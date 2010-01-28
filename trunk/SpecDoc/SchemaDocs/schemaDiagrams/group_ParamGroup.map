@@ -1,0 +1,14 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='group_ParamGroup'>
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Ontology.cvParamType'
+  coords='213,0,283,24'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Ontology.cvParamType.html#type_FuGE.Common.Ontology.cvParamType'/>
+
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Ontology.userParamType'
+  coords='213,34,293,58'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Ontology.userParamType.html#type_FuGE.Common.Ontology.userParamType'/>
+
+</map>

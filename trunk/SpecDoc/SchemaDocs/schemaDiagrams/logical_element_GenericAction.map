@@ -1,0 +1,14 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='logical_element_GenericAction'>
+ <area
+  shape='rect'
+  alt='element_GenericParameter'
+  coords='327,298,556,350'
+  href='FuGElightv1.0.0.xsd.html_element_GenericParameter.html#element_GenericParameter'/>
+
+ <area
+  shape='rect'
+  alt='element_ParameterPair'
+  coords='327,360,541,412'
+  href='FuGElightv1.0.0.xsd.html_element_ParameterPair.html#element_ParameterPair'/>
+
+</map>

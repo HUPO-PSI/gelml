@@ -1,0 +1,44 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='logical_element_GelML_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_Provider'
+  coords='284,8236,453,8302'
+  href='GelML-v1_1.xsd.html_element_Provider.html#element_Provider'/>
+
+ <area
+  shape='rect'
+  alt='element_GelMLMaterialCollection'
+  coords='284,8388,511,8454'
+  href='GelML-v1_1.xsd.html_element_GelMLMaterialCollection.html#element_GelMLMaterialCollection'/>
+
+ <area
+  shape='rect'
+  alt='element_GelMLDataCollection'
+  coords='284,8464,498,8530'
+  href='GelML-v1_1.xsd.html_element_GelMLDataCollection.html#element_GelMLDataCollection'/>
+
+ <area
+  shape='rect'
+  alt='element_GelMLProtocolCollection'
+  coords='284,8540,511,8606'
+  href='GelML-v1_1.xsd.html_element_GelMLProtocolCollection.html#element_GelMLProtocolCollection'/>
+
+ <area
+  shape='rect'
+  alt='element_GelExperiment'
+  coords='284,8616,472,8682'
+  href='GelML-v1_1.xsd.html_element_GelExperiment.html#element_GelExperiment'/>
+
+ <area
+  shape='rect'
+  alt='element_AuditCollection'
+  coords='284,8692,467,8758'
+  href='GelML-v1_1.xsd.html_element_AuditCollection.html#element_AuditCollection'/>
+
+ <area
+  shape='rect'
+  alt='element_ReferenceableCollection'
+  coords='284,8768,503,8834'
+  href='GelML-v1_1.xsd.html_element_ReferenceableCollection.html#element_ReferenceableCollection'/>
+
+</map>

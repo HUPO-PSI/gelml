@@ -1,0 +1,14 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='group_ContactGroup'>
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Audit.PersonType'
+  coords='221,0,283,24'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Audit.PersonType.html#type_FuGE.Common.Audit.PersonType'/>
+
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Audit.OrganizationType'
+  coords='221,34,311,58'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Audit.OrganizationType.html#type_FuGE.Common.Audit.OrganizationType'/>
+
+</map>

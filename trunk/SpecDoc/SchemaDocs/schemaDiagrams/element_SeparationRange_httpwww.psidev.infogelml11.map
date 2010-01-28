@@ -1,0 +1,20 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='element_SeparationRange_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_PHRange'
+  coords='140,106,233,164'
+  href='GelML-v1_1.xsd.html_element_PHRange.html#element_PHRange'/>
+
+ <area
+  shape='rect'
+  alt='element_MolWeightRange'
+  coords='140,174,270,232'
+  href='GelML-v1_1.xsd.html_element_MolWeightRange.html#element_MolWeightRange'/>
+
+ <area
+  shape='rect'
+  alt='element_OtherGelRange'
+  coords='140,242,263,300'
+  href='GelML-v1_1.xsd.html_element_OtherGelRange.html#element_OtherGelRange'/>
+
+</map>

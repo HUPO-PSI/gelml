@@ -1,0 +1,26 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='element_FeatureLocation_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_BoundaryChain'
+  coords='135,106,257,164'
+  href='GelML-v1_1.xsd.html_element_BoundaryChain.html#element_BoundaryChain'/>
+
+ <area
+  shape='rect'
+  alt='element_Circle'
+  coords='135,174,210,232'
+  href='GelML-v1_1.xsd.html_element_Circle.html#element_Circle'/>
+
+ <area
+  shape='rect'
+  alt='element_Rectangle'
+  coords='135,242,232,300'
+  href='GelML-v1_1.xsd.html_element_Rectangle.html#element_Rectangle'/>
+
+ <area
+  shape='rect'
+  alt='element_BoundaryPointSet'
+  coords='135,310,270,368'
+  href='GelML-v1_1.xsd.html_element_BoundaryPointSet.html#element_BoundaryPointSet'/>
+
+</map>

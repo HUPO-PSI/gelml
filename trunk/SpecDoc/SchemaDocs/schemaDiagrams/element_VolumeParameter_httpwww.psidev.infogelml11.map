@@ -1,0 +1,20 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='element_VolumeParameter_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_RelativeVolume'
+  coords='141,70,263,128'
+  href='GelML-v1_1.xsd.html_element_RelativeVolume.html#element_RelativeVolume'/>
+
+ <area
+  shape='rect'
+  alt='element_VolumeFunction'
+  coords='141,138,265,196'
+  href='GelML-v1_1.xsd.html_element_VolumeFunction.html#element_VolumeFunction'/>
+
+ <area
+  shape='rect'
+  alt='element_AbsoluteVolume'
+  coords='141,206,266,264'
+  href='GelML-v1_1.xsd.html_element_AbsoluteVolume.html#element_AbsoluteVolume'/>
+
+</map>

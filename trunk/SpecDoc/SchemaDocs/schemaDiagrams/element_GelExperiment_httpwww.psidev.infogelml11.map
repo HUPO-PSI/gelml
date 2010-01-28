@@ -1,0 +1,20 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='element_GelExperiment_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_Gel2DExperiment'
+  coords='126,70,257,128'
+  href='GelML-v1_1.xsd.html_element_Gel2DExperiment.html#element_Gel2DExperiment'/>
+
+ <area
+  shape='rect'
+  alt='element_Gel1DExperiment'
+  coords='126,138,257,196'
+  href='GelML-v1_1.xsd.html_element_Gel1DExperiment.html#element_Gel1DExperiment'/>
+
+ <area
+  shape='rect'
+  alt='element_OtherGelExperiment'
+  coords='126,206,272,264'
+  href='GelML-v1_1.xsd.html_element_OtherGelExperiment.html#element_OtherGelExperiment'/>
+
+</map>
