@@ -1,0 +1,20 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='element_ElectrophoresedGel_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_Gel2D'
+  coords='150,70,227,128'
+  href='GelML-v1_1.xsd.html_element_Gel2D.html#element_Gel2D'/>
+
+ <area
+  shape='rect'
+  alt='element_Gel1D'
+  coords='150,138,227,196'
+  href='GelML-v1_1.xsd.html_element_Gel1D.html#element_Gel1D'/>
+
+ <area
+  shape='rect'
+  alt='element_OtherGel'
+  coords='150,206,242,264'
+  href='GelML-v1_1.xsd.html_element_OtherGel.html#element_OtherGel'/>
+
+</map>

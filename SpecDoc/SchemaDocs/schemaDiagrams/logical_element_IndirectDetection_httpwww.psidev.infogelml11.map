@@ -1,0 +1,14 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='logical_element_IndirectDetection_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_TransferMedium'
+  coords='307,200,496,252'
+  href='GelML-v1_1.xsd.html_element_TransferMedium.html#element_TransferMedium'/>
+
+ <area
+  shape='rect'
+  alt='element_DetectionMedium'
+  coords='307,262,501,328'
+  href='GelML-v1_1.xsd.html_element_DetectionMedium.html#element_DetectionMedium'/>
+
+</map>

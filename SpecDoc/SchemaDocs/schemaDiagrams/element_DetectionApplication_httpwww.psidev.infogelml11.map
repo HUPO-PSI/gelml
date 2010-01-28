@@ -1,0 +1,14 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='element_DetectionApplication_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_DirectDetection'
+  coords='155,70,278,128'
+  href='GelML-v1_1.xsd.html_element_DirectDetection.html#element_DirectDetection'/>
+
+ <area
+  shape='rect'
+  alt='element_IndirectDetection'
+  coords='155,138,287,196'
+  href='GelML-v1_1.xsd.html_element_IndirectDetection.html#element_IndirectDetection'/>
+
+</map>

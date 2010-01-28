@@ -1,0 +1,32 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='logical_element_Gel2DProtocol_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_SampleLoadingAction'
+  coords='316,100,549,166'
+  href='GelML-v1_1.xsd.html_element_SampleLoadingAction.html#element_SampleLoadingAction'/>
+
+ <area
+  shape='rect'
+  alt='element_FirstDimensionAction'
+  coords='316,176,545,228'
+  href='GelML-v1_1.xsd.html_element_FirstDimensionAction.html#element_FirstDimensionAction'/>
+
+ <area
+  shape='rect'
+  alt='element_SecondDimensionAction'
+  coords='316,238,557,290'
+  href='GelML-v1_1.xsd.html_element_SecondDimensionAction.html#element_SecondDimensionAction'/>
+
+ <area
+  shape='rect'
+  alt='element_InterDimensionAction'
+  coords='316,300,559,366'
+  href='GelML-v1_1.xsd.html_element_InterDimensionAction.html#element_InterDimensionAction'/>
+
+ <area
+  shape='rect'
+  alt='element_DetectionAction'
+  coords='316,376,523,442'
+  href='GelML-v1_1.xsd.html_element_DetectionAction.html#element_DetectionAction'/>
+
+</map>

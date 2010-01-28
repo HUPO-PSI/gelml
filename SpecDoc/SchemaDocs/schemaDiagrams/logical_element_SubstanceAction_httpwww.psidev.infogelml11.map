@@ -1,0 +1,20 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='logical_element_SubstanceAction_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_Concentration'
+  coords='333,250,540,316'
+  href='GelML-v1_1.xsd.html_element_Concentration.html#element_Concentration'/>
+
+ <area
+  shape='rect'
+  alt='element_Mass'
+  coords='333,326,504,392'
+  href='GelML-v1_1.xsd.html_element_Mass.html#element_Mass'/>
+
+ <area
+  shape='rect'
+  alt='element_VolumeParameter'
+  coords='333,650,558,716'
+  href='GelML-v1_1.xsd.html_element_VolumeParameter.html#element_VolumeParameter'/>
+
+</map>

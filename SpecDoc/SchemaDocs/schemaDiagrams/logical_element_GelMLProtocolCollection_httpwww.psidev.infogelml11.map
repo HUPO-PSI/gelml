@@ -1,0 +1,68 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='logical_element_GelMLProtocolCollection_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_GenericEquipment'
+  coords='342,0,572,66'
+  href='GelML-v1_1.xsd.html_element_GenericEquipment.html#element_GenericEquipment'/>
+
+ <area
+  shape='rect'
+  alt='element_GenericSoftware'
+  coords='342,76,566,142'
+  href='GelML-v1_1.xsd.html_element_GenericSoftware.html#element_GenericSoftware'/>
+
+ <area
+  shape='rect'
+  alt='element_GenericProtocol'
+  coords='342,152,561,218'
+  href='GelML-v1_1.xsd.html_element_GenericProtocol.html#element_GenericProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_SampleLoadingProtocol'
+  coords='342,228,582,294'
+  href='GelML-v1_1.xsd.html_element_SampleLoadingProtocol.html#element_SampleLoadingProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_Gel2DProtocol'
+  coords='342,304,543,370'
+  href='GelML-v1_1.xsd.html_element_Gel2DProtocol.html#element_Gel2DProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_Gel1DProtocol'
+  coords='342,380,543,446'
+  href='GelML-v1_1.xsd.html_element_Gel1DProtocol.html#element_Gel1DProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_OtherGelProtocol'
+  coords='342,456,567,522'
+  href='GelML-v1_1.xsd.html_element_OtherGelProtocol.html#element_OtherGelProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_ElectrophoresisProtocol'
+  coords='342,532,580,598'
+  href='GelML-v1_1.xsd.html_element_ElectrophoresisProtocol.html#element_ElectrophoresisProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_SubstanceMixtureProtocol'
+  coords='342,608,597,674'
+  href='GelML-v1_1.xsd.html_element_SubstanceMixtureProtocol.html#element_SubstanceMixtureProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_DetectionProtocol'
+  coords='342,684,536,750'
+  href='GelML-v1_1.xsd.html_element_DetectionProtocol.html#element_DetectionProtocol'/>
+
+ <area
+  shape='rect'
+  alt='element_ImageAcquisitionProtocol'
+  coords='342,760,600,826'
+  href='GelML-v1_1.xsd.html_element_ImageAcquisitionProtocol.html#element_ImageAcquisitionProtocol'/>
+
+</map>

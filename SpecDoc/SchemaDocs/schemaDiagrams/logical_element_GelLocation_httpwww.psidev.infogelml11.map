@@ -1,0 +1,14 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='logical_element_GelLocation_httpwww.psidev.infogelml11'>
+ <area
+  shape='rect'
+  alt='element_LocationMeasure'
+  coords='284,100,467,166'
+  href='GelML-v1_1.xsd.html_element_LocationMeasure.html#element_LocationMeasure'/>
+
+ <area
+  shape='rect'
+  alt='element_FeatureLocation'
+  coords='284,176,464,242'
+  href='GelML-v1_1.xsd.html_element_FeatureLocation.html#element_FeatureLocation'/>
+
+</map>

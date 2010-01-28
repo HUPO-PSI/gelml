@@ -1,0 +1,26 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='group_MeasurementGroup'>
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Measurement.AtomicValueType'
+  coords='248,0,335,24'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Measurement.AtomicValueType.html#type_FuGE.Common.Measurement.AtomicValueType'/>
+
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Measurement.BooleanValueType'
+  coords='248,34,341,58'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Measurement.BooleanValueType.html#type_FuGE.Common.Measurement.BooleanValueType'/>
+
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Measurement.ComplexValueType'
+  coords='248,68,344,92'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Measurement.ComplexValueType.html#type_FuGE.Common.Measurement.ComplexValueType'/>
+
+ <area
+  shape='rect'
+  alt='type_FuGE.Common.Measurement.RangeType'
+  coords='248,102,308,126'
+  href='FuGElightv1.0.0.xsd.html_type_FuGE.Common.Measurement.RangeType.html#type_FuGE.Common.Measurement.RangeType'/>
+
+</map>
