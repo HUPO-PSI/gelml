@@ -1292,13 +1292,41 @@ is_a: sep:00195 ! biological sample
 relationship: has_units UO:0000098 ! milliliter
 relationship: has_units UO:0000101 ! microliter
 
-
 [Term]
 id: sep:00198
 name: equilibration buffer
 def: "A buffer intended to maintain the pH in a range appropriate for electrophoresis." [PSI:SP\:9999 "SP"]
 is_a: sep:00118 ! buffer solution
 
+[Term]
+id: sep:000199
+name: non-linear distribution
+def: "A non-linear distribution is a statsitical distribution that is not equally sequential." [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00009 ! distribution
+
+[Term]
+id: sep:00200
+name: resolving buffer
+def: "TO DO" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00118 ! buffer solution
+
+[Term]
+id: sep:00201
+name: stacking buffer
+def: "TO DO" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00118 ! buffer solution
+
+[Term]
+id: sep:00202
+name: alkylation buffer
+def: "TO DO" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00118 ! buffer solution
+
+[Term]
+id: sep:00203
+name: reduction buffer
+def: "TO DO" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00118 ! buffer solution
 
 [Typedef]
 id: has_units
