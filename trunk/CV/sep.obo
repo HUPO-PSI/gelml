@@ -444,7 +444,7 @@ is_a: sep:00062 ! image analysis software
 [Term]
 id: sep:00071
 name: Delta2D
-def: "Delata2D is image analysis software that is manufactured by Decodon." [PSI:GEL "The PSI working group for gel based experiments"]
+def: "Delta2D is image analysis software that is manufactured by Decodon." [PSI:GEL "The PSI working group for gel based experiments"]
 is_a: sep:00062 ! image analysis software
 
 [Term]
