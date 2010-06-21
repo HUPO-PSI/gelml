@@ -37,6 +37,10 @@
 	<GelMLDataCollection>
 		<Image name="2L0433.tif" id="ex002:Image0" location="http://temp.uri.come"
 			bitDepth="14" dimensionX="2224" dimensionY="3000">
+			<externalFormatDocumentation>http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?csnumber=2181</externalFormatDocumentation>
+			<fileFormat>
+				<cvParam cvRef="sepCV" accession="sep:00053" name="Tagged Image File Format"/>
+			</fileFormat>
 			<resolution>
 				<AtomicValue>
 					<PropertyValue value="300" unitAccession="TO DO" unitCvRef="UO" unitName="UO"/>
@@ -61,6 +65,7 @@
 				<userParam name="PowerLook"/>
 			</model>
 		</GenericEquipment>
+		<GenericEquipment id="SampleLoadEquipment1" name="[Name of Sample Loading equipment]"></GenericEquipment>
 		<GenericSoftware name="MagicScan" id="ex002:GenericSoftware0" version="4.6"/>
 
 	
@@ -85,6 +90,7 @@
 			name="(Optionally enter name here and use GenericAction or SubstanceAction to describe sample loading)"
 			id="ex002:SampleLoadingProtocol0">
 			<protocolText>[Protocol text in here]</protocolText>
+			<sampleLoadingEquipment GenericEquipment_ref="SampleLoadEquipment1"/>
 		</SampleLoadingProtocol>
 		<Gel2DProtocol name="Enter a name for the Gel2D protocol here"
 			id="ex002:Gel2DProtocol0">
@@ -294,9 +300,20 @@
 			Image_ref="ex002:Image0" ImageAcquisitionProtocol_ref="ex002:ImagingProtocol1" Material_ref="ex002:Gel2D0"/>
 		
 		<ExcisionApplication ElectrophoresedGel_ref="ex002:Gel2D0" GenericProtocol_ref="ExcisionProtocol1" id="ExcisionApplication1">
+			
+			<inputImageLocations>
+				<LocationSet id="LocationSetImage">
+					<GelLocation id="GL1_2">
+						<FeatureLocation centroidX="1240" centroidY="230"/>
+						<mappedLocation GelLocation_ref="GL1"/>
+					</GelLocation>
+				</LocationSet>
+			</inputImageLocations>
+			
 			<ExcisedSample GelLocation_ref="GL1" id="ExcisedSample1"/>
 			<ExcisedSample GelLocation_ref="GL2" id="ExcisedSample2"/>
 			<ExcisedSample GelLocation_ref="GL3" id="ExcisedSample3"/>
+			
 			<inputGelLocations>
 				<LocationSet id="LocationSet1">					
 					<GelLocation id="GL1">
@@ -307,12 +324,25 @@
 					</GelLocation>
 					<GelLocation id="GL3">
 						<FeatureLocation centroidX="1268" centroidY="238"/>
-					</GelLocation>					
+					</GelLocation>	
+					<GelLocation id="GL4">
+						<Rectangle xCoordinate="1589" yCoordinate="1209" pixelXSize="4" pixelYSize="8"/>
+					</GelLocation>
+					<GelLocation id="GL5">
+						<LocationMeasure>
+							<AtomicValue>
+								<PropertyValue value="45.6" unitAccession="UO:0000222" unitCvRef="sepCV" unitName="kilodalton"  />
+							</AtomicValue>							
+						</LocationMeasure>
+						<BoundaryChain startXCoordinate="1633" startYCoordinate="487" chainCode="154789532768321"/>						
+					</GelLocation>
 					<setType>
 						<cvParam cvRef="sepCV" accession="sep:00194" name="picking gel feature location set"/>					
 					</setType>
 				</LocationSet>
-			</inputGelLocations>			
+				
+			</inputGelLocations>
+			
 		</ExcisionApplication>
 	</Gel2DExperiment>		
 	
