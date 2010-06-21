@@ -1862,7 +1862,11 @@
   <xsd:keyref refer="gelml:PK_GenericEquipment" name="FK_elecEquip">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:ElectrophoresisProtocol/gelml:electrophoresisEquipment"/>
    <xsd:field xpath="@GenericEquipment_ref"/>
-  </xsd:keyref>  
+  </xsd:keyref>
+  <xsd:keyref refer="gelml:PK_GenericEquipment" name="FK_sampleEquip">
+   <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:SampleLoadingProtocol/gelml:sampleLoadingEquipment"/>
+   <xsd:field xpath="@GenericEquipment_ref"/>
+  </xsd:keyref>
   <xsd:keyref refer="gelml:PK_GenericEquipment" name="FK_detectEquip">
    <xsd:selector xpath="gelml:GelMLProtocolCollection/gelml:DetectionProtocol/gelml:detectionEquipment"/>
    <xsd:field xpath="@GenericEquipment_ref"/>
@@ -2086,7 +2090,7 @@
    <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication"/>
    <xsd:field xpath="@SampleLoadingProtocol_ref"/>
   </xsd:keyref>
-  
+ 
   
   <xsd:keyref refer="gelml:PK_OtherGel_Gel" name="FK_OtherGelGelLoad">
    <xsd:selector xpath="./gelml:OtherGelExperiment/gelml:OtherGelApplication/gelml:ChildProtocolApplications/gelml:SampleLoadingApplication"/>
