@@ -444,7 +444,7 @@ is_a: sep:00062 ! image analysis software
 [Term]
 id: sep:00071
 name: Delta2D
-def: "Delta2D is image analysis software that is manufactured by Decodon." [PSI:GEL "The PSI working group for gel based experiments"]
+def: "Delata2D is image analysis software that is manufactured by Decodon." [PSI:GEL "The PSI working group for gel based experiments"]
 is_a: sep:00062 ! image analysis software
 
 [Term]
@@ -1327,6 +1327,76 @@ id: sep:00203
 name: reduction buffer
 def: "TO DO" [PSI:Gel "The PSI working group for gel based experiments"]
 is_a: sep:00118 ! buffer solution
+
+[Term]
+id: sep:00204
+name: sample desalting
+def: "Sample desalting and solid phase extraction. Desalting and/or enrichment procedures before to the measurement." [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00101 ! protocol
+
+[Term]
+id: sep:00205
+name: microcolumn
+def: "Small volume column packet with different chromatography resins" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00204 ! sample desalting
+
+[Term]
+id: sep:00206
+name: cartridge
+def: "Large volume column packed with different chromatography resins" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00204 ! sample desalting
+
+[Term]
+id: sep:00207
+name: beads
+def: "Bulk chromatography resin applied to a sample" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00204 ! sample desalting
+
+[Term]
+id: sep:00208
+name: SPE surface
+def: "Solid membrane combining different chromatographic affinities" [PSI:Gel "The PSI working group for gel based experiments"]
+is_a: sep:00204 ! sample desalting
+
+
+[Term]
+id: sep:00210
+name: liquid chromatography
+def: "Liquid chromatography (LC) is a separation technique in which the mobile phase is a liquid. Liquid chromatography can be carried out either in a column or a plane. Present day liquid chromatography that generally utilizes very small packing particles and a relatively high pressure is referred to as high performance liquid chromatography"  [Wikipedia:Chromatography "http://en.wikipedia.org/wiki/Chromatography"]
+related_synonym: "HPLC" []
+related_synonym: "High Perfomance Liquid Chromatography" []
+is_a: sep:00101 ! protocol
+
+[Term]
+id: sep:00211
+name: reversed-phase chromatography
+def: "Reversed phase HPLC (RP-HPLC or RPC) has a non-polar stationary phase and an aqueous, moderately polar mobile phase. One common stationary phase is a silica which has been treated with RMe2SiCl, where R is a straight chain alkyl group such as C18H37 or C8H17. With these stationary phases, retention time is longer for molecules which are less polar, while polar molecules elute more readily." [Wikipedia:High-performance_liquid_chromatography "http://en.wikipedia.org/wiki/High-performance_liquid_chromatography"]
+is_a: sep:00210 ! liquid chromatography
+
+
+[Term]
+id: sep:00212
+name: normal-phase chromatography
+def: "Also known as normal-phase HPLC (NP-HPLC), or adsorption chromatography, this method separates analytes based on adsorption to a stationary surface chemistry and by polarity" [Wikipedia:High-performance_liquid_chromatography "http://en.wikipedia.org/wiki/High-performance_liquid_chromatography"]
+is_a: sep:00210 ! liquid chromatography
+
+[Term]
+id: sep:00213
+name: ion-exchange chromatography
+def: "Ion-exchange chromatography (or ion chromatography) is a process that allows the separation of ions and polar molecules based on their charge." [Wikipedia:Ion-exchange_chromatography "http://en.wikipedia.org/wiki/Ion-exchange_chromatography"]
+is_a: sep:00210 ! liquid chromatography
+
+[Term]
+id: sep:00214
+name: affinity chromatography
+def: "A method of separating biochemical mixtures and based on a highly specific biological interaction such as that between antigen and antibody, enzyme and substrate, or receptor and ligand. Affinity chromatography combines the size fractionation capability of gel permeation chromatography with the ability to design a chromatography that reversibly binds to a known subset of molecules." [Wikipedia:Affinity_chromatography "http://en.wikipedia.org/wiki/Affinity_chromatography"]
+is_a: sep:00210 ! liquid chromatography
+
+[Term]
+id: sep:00215
+name: size-exclusion chromatography
+def: "Size-exclusion chromatography (SEC) is a chromatographic method in which molecules in solution are separated by their size, not by molecular weight. It is usually applied to large molecules or macromolecular complexes such as proteins and industrial polymers." [Wikipedia:Size-exclusion_chromatography "http://en.wikipedia.org/wiki/Size-exclusion_chromatography"]
+is_a: sep:00210 ! liquid chromatography
 
 [Typedef]
 id: has_units
