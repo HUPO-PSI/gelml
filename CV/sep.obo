@@ -763,7 +763,7 @@ is_a: sep:00115 ! solution
 id: sep:00120
 name: carrier ampholyte buffer
 def: "A carrier ampholyte buffer is a buffer solutions which contains Carrier ampholytes. They enhance protein solubility by minimizing protein aggregation due to charge-charge interactions." [PSI:GEL "The PSI Working group for gel based experiments"]
-related_synonym: "Imobbilized pH gradient Buffer" []
+related_synonym: "Immobilized pH gradient Buffer" []
 exact_synonym: "IPG Buffer" []
 is_a: sep:00118 ! buffer solution
 
