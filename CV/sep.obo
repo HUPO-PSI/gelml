@@ -3,7 +3,7 @@ date: 14:05:2009 11:45
 saved-by: jonesar
 auto-generated-by: OBO-Edit 1.101
 default-namespace: default_namespace
-import: http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/unit.obo
+import: http://purl.obolibrary.org/obo/uo.obo
 
 [Term]
 id: sep:00001
